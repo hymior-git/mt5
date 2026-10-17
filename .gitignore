@@ -1,0 +1,6 @@
+# Temporary and unpacked files
+extracted_mt5/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
