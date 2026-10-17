@@ -1,0 +1,129 @@
+Welcome to the trading platform
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Welcome to the trading platform</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}.subtitle{margin-bottom:24px;line-height:1.5}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}.link{display:inline-block;vertical-align:top;border:1px solid #e7edf3;padding:12px;line-height:0;margin:0 32px 24px}.link:hover{border-color:#bee7ff;text-decoration:none}.link__footer{display:block;margin-top:12px;position:relative;padding-left:30px;border-radius:2px}.link__footer img{position:absolute;left:0;top:4px}.link__text{display:block;text-align:left;color:#666;font-size:10px;line-height:1.3}.link__name{display:block;font-size:13px;font-weight:600;color:#000;text-align:left}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}.link{border-color:#444444}.link:hover{border-color:#1E90FF}.link__text{color:#808080}.link__name{color:#D6D6D6}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Welcome to the trading platform</h1>
+      <div class="text">
+        <p>This is a cutting-edge and <a href="https://www.metatrader5.com/en/trading-platform?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.welcome" target="_blank">powerful trading platform</a> allowing traders of any level to achieve maximum results regardless of their trading style.</p>
+        <ul>
+          <li>Flexible trading system supporting all types of orders and different execution modes</li>
+          <li>Extensive analytical capabilities - 38 technical indicators and 44 analytical tools, as well as 21 time periods of charts - from minute to month</li>
+          <li>Algorithmic trading — <a href="https://www.mql5.com/en/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.welcome" target="_blank">the largest store of trading apps</a> where you can purchase ready-to-use trading robots and indicators</li>
+          <li>Trading signals — choose any of 11,000 <a href="https://www.mql5.com/en/signals?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.welcome" target="_blank">paid and free signals </a>, subscribe and copy provider's deals on your account</li>
+          <li><a href="https://www.mql5.com/en/vps?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.welcome" target="_blank">Specialized hosting</a> for traders — minimal network delays will allow your Robots and Signals to trade 24/7 as efficiently as possible<br></li>
+          <li>Professional MQL5 development environment — for creating, debugging, testing and executing trading robots and indicators of any complexity</li>
+          <li><a href="https://www.mql5.com/en/job?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.welcome" target="_blank">Freelance</a> — hire a professional developer who will write a robot or indicator according to your requirements<br></li>
+          <li><a href="https://www.mql5.com/en/forum/455279?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.welcome" target="_blank">Reports</a> will allow you to analyze your trading activity and find its strengths and weaknesses</li>
+          <li>Payments — top up the deposit of a real account or withdraw money from it directly in the platform</li>
+        </ul>
+      </div>
+      <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/1.all-terminals.jpg" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/1.all-terminals.png" media="(prefers-color-scheme: dark)" />
+        <img width="620" height="378" alt="Trading platform" src="https://c.mql5.com/external/emails/mt5/v2/1.all-terminals.jpg" />
+    </picture>
+      <br /> <br />
+      <div class="subtitle">
+        You can trade on your account using the web terminal, Mac and Linux platforms, as well as via mobile devices:
+      </div>
+
+      <div class="links">
+        <a href="https://download.mql5.com/cdn/mobile/mt5/ios?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.mobile"
+          target="_blank" class="link">
+          <picture>
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-29853543644.png" media="(prefers-color-scheme: light)" />
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-29853543644.png" media="(prefers-color-scheme: dark)" />
+            <img width="100" height="100" alt=""
+            src="https://c.mql5.com/external/emails/mt5/v2/qr-29853543644.png" />
+        </picture>
+          <span class="link__footer">
+            <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/app-store.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/app-store.png" media="(prefers-color-scheme: dark)" />
+        <img width="22" height="22" alt="AppStore" src="https://c.mql5.com/external/emails/mt5/v2/app-store.png" />
+    </picture>
+            <span class="link__text">
+              Available on the
+              <span class="link__name">AppStore</span>
+            </span>
+          </span>
+        </a>
+        <a href="https://download.mql5.com/cdn/mobile/mt5/android?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.mobile"
+          target="_blank" class="link">
+          <picture>
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-27044869746.png" media="(prefers-color-scheme: light)" />
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-27044869746.png" media="(prefers-color-scheme: dark)" />
+            <img width="100" height="100" alt=""
+            src="https://c.mql5.com/external/emails/mt5/v2/qr-27044869746.png" />
+        </picture>
+          <span class="link__footer">
+            <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/google-play.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/google-play.png" media="(prefers-color-scheme: dark)" />
+        <img width="22" height="22" alt="Google Play" src="https://c.mql5.com/external/emails/mt5/v2/google-play.png" />
+    </picture>
+            <span class="link__text">
+              Available on the
+              <span class="link__name">Google Play</span>
+            </span>
+          </span>
+        </a>
+        <a href="https://download.mql5.com/cdn/mobile/mt5/android/app-gallery?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.mobile"
+          target="_blank" class="link">
+          <picture>
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-16418303711.png" media="(prefers-color-scheme: light)" />
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-16418303711.png" media="(prefers-color-scheme: dark)" />
+            <img width="100" height="100" alt=""
+            src="https://c.mql5.com/external/emails/mt5/v2/qr-16418303711.png" />
+        </picture>
+          <span class="link__footer">
+            <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/huawei.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/huawei.png" media="(prefers-color-scheme: dark)" />
+        <img width="22" height="22" alt="App Gallery" src="https://c.mql5.com/external/emails/mt5/v2/huawei.png" />
+    </picture>
+            <span class="link__text">
+              Available on the
+              <span class="link__name">App Gallery</span>
+            </span>
+          </span>
+        </a>
+        <a href="https://download.mql5.com/cdn/web/metaquotes.software.corp/mt5/metatrader5.apk?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.mobile"
+          target="_blank" class="link">
+          <picture>
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-28024256433.png" media="(prefers-color-scheme: light)" />
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-28024256433.png" media="(prefers-color-scheme: dark)" />
+            <img width="100" height="100" alt=""
+            src="https://c.mql5.com/external/emails/mt5/v2/qr-28024256433.png" />
+        </picture>
+          <span class="link__footer">
+            <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/apk.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/apk.png" media="(prefers-color-scheme: dark)" />
+        <img width="22" height="22" alt="APK File" src="https://c.mql5.com/external/emails/mt5/v2/apk.png" />
+    </picture>
+            <span class="link__text">
+              Available on the
+              <span class="link__name">APK File</span>
+            </span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Mail Welcome');</script>
+</body>
+
+</html>

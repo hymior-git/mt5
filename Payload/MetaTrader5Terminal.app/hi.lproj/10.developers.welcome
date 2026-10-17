@@ -1,0 +1,72 @@
+अपना खुद का ट्रेडिंग ऐप बनाएं
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>अपना खुद का संकेतक और विशेषज्ञ सलाहकार बनाएं</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}.buttons{margin-bottom:40px}.button{display:inline-block;border-radius:2px;border:1px solid #4ba638;background:#fff;height:40px;line-height:38px;padding:0 20px;color:#000;font-size:15px;align-items:center;white-space:nowrap}.button:hover{cursor:pointer;opacity:.8;text-decoration:none}.socials{margin-bottom:24px}.socials h3{font-size:13px;font-weight:400;margin-bottom:20px}.social-list{margin:0 auto;max-width:490px;display:flex;flex-wrap:wrap;justify-content:space-between}@media (max-width:500px){.social-list{display:block}.social-link{display:inline-block;vertical-align:top;margin:0 32px 24px}}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}.button{border-color:#06D189;background:transparent;color:#D6D6D6}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>अपने संकेतक और विशेषज्ञ सलाहकार बनाएं</h1>
+      <div class="text">
+        <p>ट्रेडिंग प्लेटफॉर्म के साथ, आप एल्गोरिथम ट्रेडरों के लिए संपूर्ण इकोसिस्टम तक पहुंच प्राप्त करते हैं। यदि आप <a href="https://www.mql5.com/en/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">मौजूदा एप्लीकेशन</a> के बीच वांछित समाधान नहीं ढूंढ पा रहे हैं, तो आप अपनी खुद की ट्रेडिंग रणनीतियाँ और संकेतक बना सकते हैं। इकोसिस्टम किसी भी स्तर के डेवलपर्स के लिए उन्नत उपकरण और सेवाएँ प्रदान करता है। व्यापक ज्ञान आधार और शक्तिशाली डेवेलपमेंट उपकरण शुरुआती लोगों के लिए तेजी से सीखने की प्रक्रिया प्रदान करते हैं और पेशेवरों को गुणात्मक रूप से नए स्तरों तक पहुंचने में सहायता करते हैं।</p>
+        <h2>इकोसिस्टम प्रदान करता है:</h2>
+        <ul>
+          <li>तकनीकी संकेतक, ट्रेडिंग रोबोट और उपयोगिताओं को विकसित करने के लिए <a href="https://www.mql5.com/en/docs?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">MetaQuotes Language 5</a>। यह एक उन्नत, उच्च-स्तरीय लैंग्वेज है, जो सिंटैक्स में C++ से काफी मिलती-जुलती है, जो आपको ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग का उपयोग करके प्रोग्राम राइट करने की सुविधा देती है।</li>
+          <li>प्रोफेशनल एडिटिंग टूल <a href="https://www.metatrader5.com/en/automated-trading/metaeditor?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">MetaEditor</a> इंटेलिजेंस कोड हैंडलिंग, डिबगिंग और प्रोफाइलिंग विकल्प प्रदान करता है। संपादक किसी भी जटिलता स्तर के ट्रेडिंग एप्लीकेशन के डेवेलपमेंट की सुविधा प्रदान करता है। <br></li>
+          <li>अन्य सुविधाओं के अलावा दृश्य परीक्षण, अनुकूलन, जेनेटिक एल्गोरिदम और एक वितरित परीक्षण एजेंट नेटवर्क के समर्थन के साथ <a href="https://www.metatrader5.com/en/automated-trading/strategy-tester?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">रणनीति परीक्षक</a>। किसी भी मूल्य इतिहास खंड पर विशेषज्ञ सलाहकार संचालन का अनुकरण करें और व्यापक रिपोर्ट का विश्लेषण करें।<br></li>
+          <li>संस्करण नियंत्रण के साथ सबवर्जन-आधारित <a href="https://www.metatrader5.com/en/metaeditor/help/mql5storage/mql5storage_working?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">MQL5 स्टोरेज</a>। अपनी फ़ाइलों को सुरक्षित रूप से संग्रहीत करें, उन्हें दुनिया में कहीं से भी एक्सेस करें, और जब भी आवश्यक हो बड़ी परियोजनाओं पर सहयोग करें।<br></li>
+          <li>ट्रेडिंग प्लेटफॉर्म के लिए एप्लिकेशन के स्रोत कोड पेश करने वाला सबसे बड़ा निःशुल्क <a href="https://www.mql5.com/en/code?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">कोड बेस</a>। विशेषज्ञ सलाहकारों, तकनीकी संकेतकों, स्क्रिप्ट और पुस्तकालयों के तैयार उदाहरणों का अन्वेषण करें और उन्हें अपने स्वयं के एप्लिकेशन बनाने के लिए बेस के रूप में उपयोग करें।<br></li>
+          <li>अद्वितीय ज्ञान का आधार — प्रोग्रामिंग के विभिन्न पहलुओं को कवर करने वाले विस्तृत <a href="https://www.mql5.com/en/docs?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">दस्तावेज़ीकरण</a> और <a href="https://www.mql5.com/en/articles?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">विशेषज्ञ लेखों</a> वाले हजारों पृष्ठ।<br></li>
+        </ul>
+        <p>पेशेवर डेवलपर्स के लिए, हम एक विशेष साइट की पेशकश करते हैं जहां आप लाखों उपयोगकर्ताओं को अपने उत्पाद और विशेषज्ञता प्रदान कर सकते हैं। <a href="https://www.mql5.com/?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">MQL5.community</a>, एल्गोरिथम ट्रेडरों का सबसे बड़ा समुदाय, आपके लिए और भी नए अवसर खोलेगा। <a href="https://www.mql5.com/en/forum?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">फ़ोरम</a> में अपने विचारों पर चर्चा करें, <a href="https://www.mql5.com/en/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">मार्केट</a> में अपने प्रोग्राम बेचें, या <a href="https://www.mql5.com/en/job?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">फ्रीलांस</a> प्रोजेक्ट लें — MQL5.community के साथ अपने प्रोग्रामिंग कौशल से पहचान और आय अर्जित करें।</p>
+      </div>
+      <div class="buttons">
+        <a href="https://www.mql5.com/en/articles/385?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank" class="button">MQL5.com पर विक्रेता बनें</a>
+      </div>
+      <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/10.developers.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/10.developers.png" media="(prefers-color-scheme: dark)" />
+        <img width="600" height="314" alt="" src="https://c.mql5.com/external/emails/mt5/v2/10.developers.png">
+    </picture>
+      <br>
+      <div class="text">
+        <h2>उपयोगी लेख:</h2>
+        <ol>
+          <li><a href="https://www.mql5.com/en/articles/4234?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">आप समुदाय में कितना कमा सकते हैं?</a><br></li>
+          <li><a href="https://www.mql5.com/en/articles/1019?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">फ्रीलांस में कमाई कैसे करें</a></li>
+          <li><a href="https://www.mql5.com/en/articles/999?utm_source=mt5terminal&utm_medium=special&utm_campaign=hi.mail.developers" target="_blank">मार्केट में अपने उत्पाद कैसे बेचें?</a></li>
+        </ol>
+      </div>
+      <div class="socials">
+        <h3>डेवलपर चैनलों की सदस्यता लेकर जुड़े रहें:</h3>
+        <div class="social-list">
+          <a href="https://www.facebook.com/mql5.community" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-facebook.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-facebook.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80" alt="फेसबुक" src="https://c.mql5.com/external/emails/mt5/v2/qr-facebook.png">
+    </picture></a>
+          <a href="https://twitter.com/mql5com" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-twitter.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-twitter.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80" alt="ट्विटर" src="https://c.mql5.com/external/emails/mt5/v2/qr-twitter.png">
+    </picture></a>
+          <a href="https://t.me/mql5dev" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-telegram.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-telegram.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80" alt="टेलीग्राम" src="https://c.mql5.com/external/emails/mt5/v2/qr-telegram.png">
+    </picture></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Mail Developers');</script>
+</body>
+
+</html>

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>MetaTrader 5 — Local Demo Trading Simulator</title>
+  <link rel="icon" type="image/png" href="assets/icon60x60@2x.png">
+  <link rel="apple-touch-icon" href="assets/icon60x60@2x.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/mt5-theme.css">
+  <link rel="stylesheet" href="css/mt5-ios.css">
+  
+  <style>
+    /* View Switcher Floating Bar */
+    .view-switcher-bar {
+      position: fixed;
+      top: 10px;
+      right: 12px;
+      z-index: 9999;
+      background: rgba(24, 27, 36, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid #364057;
+      border-radius: 20px;
+      padding: 3px;
+      display: flex;
+      gap: 3px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    .view-switch-btn {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .view-switch-btn.active {
+      background: #0a84ff;
+      color: #fff;
+    }
+    .view-switch-btn.export-btn {
+      background: #238636;
+      color: #fff;
+    }
+    .view-switch-btn.export-btn:hover {
+      background: #2ea043;
+    }
+
+    #desktopViewContainer {
+      display: none;
+      height: 100vh;
+      flex-direction: column;
+    }
+    body.show-desktop #desktopViewContainer {
+      display: flex;
+    }
+    body.show-desktop #iosViewContainer {
+      display: none;
+    }
+  </style>
+</head>
+<body class="show-ios">
+
+  <!-- ================= View Switcher & Direct IPA Export ================= -->
+  <div class="view-switcher-bar">
+    <button class="view-switch-btn active" id="btnSwitchIos">📱 MT5 iOS (99%)</button>
+    <button class="view-switch-btn" id="btnSwitchDesktop">🖥️ MT5 Desktop</button>
+    <a href="MetaTrader5_LocalDemo.ipa" download="MetaTrader5_LocalDemo.ipa" class="view-switch-btn export-btn" id="btnDirectDownloadIpa" title="Tải trực tiếp file cài đặt iOS (.IPA)">
+      📥 Xuất file .IPA
+    </a>
+  </div>
+
+  <!-- =========================================================================
+       1. MT5 iOS INTERFACE (99% AUTHENTIC TO IPHONE METATRADER 5)
+       ========================================================================= -->
+  <div class="device-container" id="iosViewContainer">
+    <div class="iphone-frame">
+      <!-- Dynamic Island -->
+      <div class="dynamic-island"></div>
+
+      <!-- iOS Status Bar -->
+      <div class="ios-status-bar">
+        <span id="iosClock">09:41</span>
+        <div class="status-icons">
+          <span>5G</span>
+          <span>📶</span>
+          <span>🔋</span>
+        </div>
+      </div>
+
+      <!-- iOS Navigation Header -->
+      <header class="ios-nav-header" id="iosNavHeader">
+        <button class="ios-nav-btn" id="iosNavLeftBtn" style="visibility:hidden;">Sửa</button>
+        <div class="ios-nav-title" id="iosNavTitle">Bảng giá</div>
+        <button class="ios-nav-btn" id="iosNavRightBtn">+</button>
+      </header>
+
+      <!-- Main Screen Scrollable Content -->
+      <main class="ios-screen-content">
+
+        <!-- ================= TAB 1: QUOTES (BẢNG GIÁ) ================= -->
+        <section class="ios-tab-page active" id="iosTabQuotes">
+          <!-- Segmented Control: Đơn giản / Nâng cao -->
+          <div class="ios-segmented-control">
+            <button class="segmented-btn" id="btnQuotesSimple">Đơn giản</button>
+            <button class="segmented-btn active" id="btnQuotesAdvanced">Nâng cao</button>
+          </div>
+
+          <div class="quotes-list" id="iosQuotesList">
+            <!-- Dynamically populated with MT5 iOS Big Pips style -->
+          </div>
+        </section>
+
+        <!-- ================= TAB 2: CHARTS (BIỂU ĐỒ) ================= -->
+        <section class="ios-tab-page" id="iosTabCharts">
+          <div class="ios-chart-container">
+            <!-- iOS Chart Top Control Bar -->
+            <div class="ios-chart-top-bar">
+              <button class="ios-chart-tf-btn" id="iosTfBtn">M5 ▾</button>
+              <span style="font-weight:700; color:#fff; font-size:14px;" id="iosChartSymbolTitle">EURUSD</span>
+              <div style="display:flex; gap:6px;">
+                <button class="ios-chart-tf-btn" id="iosCrosshairBtn">✛</button>
+                <button class="ios-chart-tf-btn" id="iosOneClickToggleBtn">⚡</button>
+              </div>
+            </div>
+
+            <!-- One-Click Quick Trading Bar (iOS Top Bar) -->
+            <div class="ios-oneclick-bar" id="iosOneClickBar">
+              <button class="ios-trade-btn sell" id="iosQuickSell">
+                <span>SELL</span>
+                <strong id="iosQuickSellPrice">1.08500</strong>
+              </button>
+              <input type="number" step="0.01" min="0.01" max="50" value="0.10" class="ios-lot-picker" id="iosQuickLot">
+              <button class="ios-trade-btn buy" id="iosQuickBuy">
+                <span>BUY</span>
+                <strong id="iosQuickBuyPrice">1.08512</strong>
+              </button>
+            </div>
+
+            <!-- Practice Mode Forward Replay Banner -->
+            <div class="ios-practice-banner">
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span class="practice-status-dot" id="iosPracticeDot"></span>
+                <strong style="color:#64b5f6;" id="iosPracticeTitle">Practice Mode</strong>
+              </div>
+              <div style="display:flex; gap:4px;">
+                <button class="btn btn-secondary" style="padding:2px 8px; font-size:11px;" id="iosBtnPracticePlay">▶</button>
+                <button class="btn btn-secondary" style="padding:2px 8px; font-size:11px;" id="iosBtnPracticePause">⏸</button>
+                <button class="btn btn-secondary" style="padding:2px 8px; font-size:11px;" id="iosBtnPracticeStep">⏭</button>
+              </div>
+            </div>
+
+            <!-- Candlestick Canvas -->
+            <div style="flex:1; position:relative;" id="iosChartCanvasWrapper">
+              <canvas id="iosChartCanvas" style="width:100%; height:100%; display:block;"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= TAB 3: TRADE (GIAO DỊCH) ================= -->
+        <section class="ios-tab-page" id="iosTabTrade">
+          <!-- Top Account Metrics Summary (Exact MT5 iOS Layout) -->
+          <div class="trade-summary-card">
+            <div class="summary-row total-pl">
+              <span style="color:#fff;">Lãi/Lỗ:</span>
+              <strong id="iosTradeTotalPL" style="color:#0a84ff;">+$0.00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Số dư:</span>
+              <strong id="iosTradeBalance">1,000.00 USD</strong>
+            </div>
+            <div class="summary-row">
+              <span>Tài sản:</span>
+              <strong id="iosTradeEquity">1,000.00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Ký quỹ:</span>
+              <strong id="iosTradeMargin">0.00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Ký quỹ còn lại:</span>
+              <strong id="iosTradeFreeMargin">1,000.00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Mức ký quỹ (%):</span>
+              <strong id="iosTradeMarginLevel">0.00%</strong>
+            </div>
+          </div>
+
+          <!-- Section: LỆNH ĐANG MỞ (POSITIONS) -->
+          <div class="section-header-title">Lệnh đang mở (Positions)</div>
+          <div id="iosPositionsList">
+            <!-- Dynamically populated with open positions -->
+          </div>
+
+          <!-- Section: LỆNH CHỜ (PENDING ORDERS) -->
+          <div class="section-header-title" id="iosPendingHeader" style="display:none;">Lệnh chờ (Orders)</div>
+          <div id="iosPendingList">
+            <!-- Dynamically populated with pending orders -->
+          </div>
+        </section>
+
+        <!-- ================= TAB 4: HISTORY (LỊCH SỬ) ================= -->
+        <section class="ios-tab-page" id="iosTabHistory">
+          <div class="ios-segmented-control">
+            <button class="segmented-btn active">Ngày</button>
+            <button class="segmented-btn">Tuần</button>
+            <button class="segmented-btn">Tháng</button>
+            <button class="segmented-btn">Tùy chọn</button>
+          </div>
+
+          <div class="history-summary-box">
+            <div class="summary-row">
+              <span>Lợi nhuận:</span>
+              <strong id="iosHistProfit" style="color:#0a84ff;">+$0.00 USD</strong>
+            </div>
+            <div class="summary-row">
+              <span>Nạp tiền:</span>
+              <strong id="iosHistDeposit">$0.00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Rút tiền:</span>
+              <strong id="iosHistWithdraw">$0.00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Số dư:</span>
+              <strong id="iosHistBalance">$1,000.00</strong>
+            </div>
+          </div>
+
+          <div class="section-header-title">Giao dịch đã đóng</div>
+          <div id="iosHistoryList">
+            <!-- Dynamically populated with closed trades -->
+          </div>
+        </section>
+
+        <!-- ================= TAB 5: SETTINGS (CÀI ĐẶT) ================= -->
+        <section class="ios-tab-page" id="iosTabSettings">
+          <!-- Top Account Profile Card -->
+          <div class="settings-account-card" id="iosSettingsAccountCard">
+            <div class="account-avatar">👤</div>
+            <div class="account-info-main">
+              <span class="acc-name" id="iosSettingsAccName">Demo Trader Pro</span>
+              <span class="acc-details"><span id="iosSettingsAccNumber">5001293</span> — MetaQuotes-Demo</span>
+              <span class="acc-details" style="color:#30d158;">Local Demo Simulator (<span id="iosSettingsAccLeverage">1:100</span>)</span>
+            </div>
+          </div>
+
+          <!-- Group 1: Quản lý tài khoản -->
+          <div class="settings-group">
+            <div class="settings-cell" id="iosCellAccounts">
+              <div class="settings-cell-left">
+                <div class="cell-icon" style="background:#0a84ff;">👤</div>
+                <span>Quản lý tài khoản Local Demo</span>
+              </div>
+              <span class="chevron">›</span>
+            </div>
+          </div>
+
+          <!-- Group 2: Công cụ chuyên nghiệp -->
+          <div class="settings-group">
+            <div class="settings-cell" id="iosCellAnalytics">
+              <div class="settings-cell-left">
+                <div class="cell-icon" style="background:#30d158;">📈</div>
+                <span>Thống kê hiệu suất (Analytics)</span>
+              </div>
+              <span class="chevron">›</span>
+            </div>
+            <div class="settings-cell" id="iosCellJournal">
+              <div class="settings-cell-left">
+                <div class="cell-icon" style="background:#bf5af2;">📓</div>
+                <span>Nhật ký giao dịch & ICT</span>
+              </div>
+              <span class="chevron">›</span>
+            </div>
+            <div class="settings-cell" id="iosCellDiscipline">
+              <div class="settings-cell-left">
+                <div class="cell-icon" style="background:#ff9f0a;">🛡️</div>
+                <span>Kỷ luật & Điểm số (Discipline)</span>
+              </div>
+              <span class="chevron">›</span>
+            </div>
+          </div>
+
+          <!-- Group 3: Xuất file IPA & Sao lưu -->
+          <div class="settings-group">
+            <div class="settings-cell" id="iosCellExportIpa">
+              <div class="settings-cell-left">
+                <div class="cell-icon" style="background:#ff375f;">📲</div>
+                <span><strong>Xuất file cài đặt iOS (.IPA)</strong></span>
+              </div>
+              <span style="color:#0a84ff; font-weight:600; font-size:13px;">Tải về ›</span>
+            </div>
+            <div class="settings-cell" id="iosCellExportBackup">
+              <div class="settings-cell-left">
+                <div class="cell-icon" style="background:#64d2ff;">💾</div>
+                <span>Sao lưu dữ liệu (Export JSON)</span>
+              </div>
+              <span class="chevron">›</span>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ================= iOS Bottom Tab Bar ================= -->
+      <nav class="ios-tab-bar">
+        <button class="ios-tab-item active" data-iostab="iosTabQuotes">
+          <span class="tab-icon">🗂️</span>
+          <span>Bảng giá</span>
+        </button>
+        <button class="ios-tab-item" data-iostab="iosTabCharts">
+          <span class="tab-icon">📈</span>
+          <span>Biểu đồ</span>
+        </button>
+        <button class="ios-tab-item" data-iostab="iosTabTrade">
+          <span class="tab-icon">⇄</span>
+          <span>Giao dịch</span>
+        </button>
+        <button class="ios-tab-item" data-iostab="iosTabHistory">
+          <span class="tab-icon">🕒</span>
+          <span>Lịch sử</span>
+        </button>
+        <button class="ios-tab-item" data-iostab="iosTabSettings">
+          <span class="tab-icon">⚙️</span>
+          <span>Cài đặt</span>
+        </button>
+      </nav>
+
+      <!-- Home Indicator -->
+      <div class="home-indicator"></div>
+
+      <!-- iOS Action Sheet for Symbol Taps -->
+      <div class="ios-action-sheet-overlay" id="iosActionSheet">
+        <div class="ios-action-sheet">
+          <div class="action-sheet-group">
+            <div class="action-sheet-title" id="actionSheetTitle">EURUSD — Euro vs US Dollar</div>
+            <button class="action-sheet-btn" id="asBtnTrade" style="font-weight:700;">Giao dịch (Trade)</button>
+            <button class="action-sheet-btn" id="asBtnChart">Biểu đồ (Chart)</button>
+            <button class="action-sheet-btn" id="asBtnDetails">Chi tiết (Details)</button>
+          </div>
+          <button class="action-sheet-btn cancel" id="asBtnCancel">Hủy</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. MT5 DESKTOP TERMINAL INTERFACE
+       ========================================================================= -->
+  <div id="desktopViewContainer">
+    <!-- Top Title Bar -->
+    <header class="mt5-titlebar">
+      <div class="title-left">
+        <img src="assets/icon60x60@2x.png" alt="MT5 Logo" class="app-icon">
+        <span class="app-title">MetaTrader 5 Terminal — Desktop Mode</span>
+        <div class="account-badge" id="titleAccountBadge">
+          <span id="titleAccNumber">5001293</span>: <strong id="titleAccName">Main Demo</strong> [<span id="titleAccCurrency">USD</span>, 1:<span id="titleAccLeverage">100</span>]
+        </div>
+      </div>
+      <div class="title-right">
+        <span class="live-clock" id="liveClock">00:00:00 UTC</span>
+        <button class="btn-icon-title" id="btnOpenAccounts">⚙️ Accounts</button>
+        <button class="btn-icon-title" id="btnOpenDisciplineRules">🛡️ Rules</button>
+        <button class="btn-icon-title" id="btnExportBackup">💾 Export</button>
+        <button class="btn-icon-title" id="btnImportBackup">📂 Import</button>
+        <input type="file" id="fileImportBackup" accept=".json" style="display:none">
+      </div>
+    </header>
+
+    <!-- Menu Bar -->
+    <nav class="mt5-menubar">
+      <div class="menu-item">File</div>
+      <div class="menu-item">View</div>
+      <div class="menu-item">Insert</div>
+      <div class="menu-item">Charts</div>
+      <div class="menu-item">Options</div>
+      <div class="menu-item">Tools</div>
+      <div class="menu-item">Window</div>
+      <div class="menu-item">Help</div>
+    </nav>
+
+    <!-- Toolbar -->
+    <div class="mt5-toolbar">
+      <div class="toolbar-group">
+        <button class="tool-btn primary" id="btnNewOrder">⚡ New Order (F9)</button>
+        <div class="tool-sep"></div>
+        <button class="tool-btn" id="btnZoomIn">🔍+</button>
+        <button class="tool-btn" id="btnZoomOut">🔍-</button>
+        <div class="tool-sep"></div>
+        <button class="tf-btn" data-tf="M1">M1</button>
+        <button class="tf-btn active" data-tf="M5">M5</button>
+        <button class="tf-btn" data-tf="M15">M15</button>
+        <button class="tf-btn" data-tf="M30">M30</button>
+        <button class="tf-btn" data-tf="H1">H1</button>
+        <button class="tf-btn" data-tf="D1">D1</button>
+      </div>
+
+      <!-- Practice Bar -->
+      <div class="practice-bar">
+        <span class="practice-status-dot" id="practiceStatusDot"></span>
+        <span class="practice-label" id="practiceModeTitle">Practice Mode</span>
+        <button class="tool-btn" id="btnPracticePlay">▶ Play</button>
+        <button class="tool-btn" id="btnPracticePause">⏸ Pause</button>
+        <button class="tool-btn" id="btnPracticeNext">⏭ Step</button>
+        <div class="tool-sep"></div>
+        <label style="color:#8a94a6; font-size:11px;">Speed:</label>
+        <select id="practiceSpeedSelect" style="background:#151821; color:#fff; border:1px solid #364057; border-radius:3px; padding:2px 4px; font-size:11px;">
+          <option value="1">1x</option>
+          <option value="2">2x</option>
+          <option value="5" selected>5x</option>
+          <option value="10">10x</option>
+          <option value="20">20x</option>
+          <option value="50">50x</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Workspace -->
+    <main class="mt5-workspace">
+      <!-- Left Sidebar -->
+      <aside class="mt5-sidebar">
+        <div class="panel-header">
+          <span>Market Watch</span>
+        </div>
+        <div class="market-watch-container">
+          <table class="mw-table">
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Bid</th>
+                <th>Ask</th>
+                <th>Spread</th>
+              </tr>
+            </thead>
+            <tbody id="marketWatchBody"></tbody>
+          </table>
+        </div>
+        <div class="panel-header"><span>Navigator</span></div>
+        <div class="navigator-container">
+          <div class="nav-tree-item active">📁 <strong>Accounts</strong></div>
+          <div style="padding-left: 20px;" id="navAccountsList"></div>
+          <div class="nav-tree-item">📁 Indicators</div>
+          <div class="nav-tree-item">📁 Expert Advisors</div>
+        </div>
+      </aside>
+
+      <!-- Center Chart & Toolbox -->
+      <section class="mt5-main-center">
+        <div class="chart-wrapper" id="chartContainer">
+          <div class="quick-trade-panel">
+            <button class="quick-btn sell" id="btnQuickSell"><span>SELL</span><strong id="quickSellPrice">1.08500</strong></button>
+            <input type="number" step="0.01" min="0.01" max="50" value="0.10" class="quick-lot-input" id="quickLotInput">
+            <button class="quick-btn buy" id="btnQuickBuy"><span>BUY</span><strong id="quickBuyPrice">1.08512</strong></button>
+          </div>
+          <canvas id="chartCanvas"></canvas>
+        </div>
+
+        <!-- Bottom Toolbox -->
+        <section class="mt5-toolbox">
+          <div class="toolbox-tabs">
+            <button class="tab-btn active" data-tab="tabTrade">💼 Trade (<span id="openPositionsBadge">0</span>)</button>
+            <button class="tab-btn" data-tab="tabExposure">🌐 Exposure</button>
+            <button class="tab-btn" data-tab="tabHistory">📜 History (<span id="closedTradesBadge">0</span>)</button>
+            <button class="tab-btn" data-tab="tabAnalytics">📈 Trading Analytics</button>
+            <button class="tab-btn" data-tab="tabJournal">📓 Trading Journal & ICT</button>
+            <button class="tab-btn" data-tab="tabDiscipline">🛡️ Trading Discipline</button>
+            <button class="tab-btn" data-tab="tabSystemJournal">📋 Journal</button>
+          </div>
+          <div class="toolbox-content">
+            <!-- Trade Tab -->
+            <div class="tab-pane active" id="tabTrade">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Ticket</th><th>Time</th><th>Type</th><th>Volume</th><th>Symbol</th><th>Price</th>
+                    <th>S/L</th><th>T/P</th><th>Current</th><th>Commission</th><th>Swap</th><th>Profit</th><th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="openPositionsBody"></tbody>
+              </table>
+              <div class="account-summary-bar">
+                <div class="summary-item">Balance: <strong id="barBalance">$1,000.00</strong></div>
+                <div class="summary-item equity">Equity: <strong id="barEquity">$1,000.00</strong></div>
+                <div class="summary-item">Margin: <strong id="barMargin">$0.00</strong></div>
+                <div class="summary-item">Free Margin: <strong id="barFreeMargin">$1,000.00</strong></div>
+                <div class="summary-item margin-level">Margin Level: <strong id="barMarginLevel">0.00%</strong></div>
+              </div>
+            </div>
+
+            <!-- Exposure Tab -->
+            <div class="tab-pane" id="tabExposure">
+              <table class="data-table">
+                <thead><tr><th>Asset</th><th>Volume</th><th>Rate</th><th>USD Equivalent</th><th>Share</th></tr></thead>
+                <tbody id="exposureBody"></tbody>
+              </table>
+            </div>
+
+            <!-- History Tab -->
+            <div class="tab-pane" id="tabHistory">
+              <table class="data-table">
+                <thead><tr><th>Ticket</th><th>Open</th><th>Type</th><th>Lots</th><th>Symbol</th><th>Entry</th><th>S/L</th><th>T/P</th><th>Close</th><th>Exit</th><th>Comm</th><th>Swap</th><th>Profit</th><th>Reason</th></tr></thead>
+                <tbody id="historyBody"></tbody>
+              </table>
+            </div>
+
+            <!-- Analytics Tab -->
+            <div class="tab-pane" id="tabAnalytics">
+              <div class="analytics-grid">
+                <div class="kpi-card"><div class="kpi-title">Total Trades</div><div class="kpi-val" id="kpiTotalTrades">0</div></div>
+                <div class="kpi-card"><div class="kpi-title">Win Rate</div><div class="kpi-val green" id="kpiWinRate">0.0%</div></div>
+                <div class="kpi-card"><div class="kpi-title">Profit Factor</div><div class="kpi-val" id="kpiProfitFactor">0.00</div></div>
+                <div class="kpi-card"><div class="kpi-title">Net Profit</div><div class="kpi-val" id="kpiNetProfit">$0.00</div></div>
+                <div class="kpi-card"><div class="kpi-title">Expectancy</div><div class="kpi-val" id="kpiExpectancy">$0.00</div></div>
+                <div class="kpi-card"><div class="kpi-title">Max Drawdown</div><div class="kpi-val red" id="kpiMaxDrawdown">$0.00</div></div>
+              </div>
+              <div class="analytics-charts-row">
+                <div class="chart-box" style="flex:2;"><canvas id="canvasEquityCurve" style="width:100%; height:200px;"></canvas></div>
+                <div class="chart-box" style="flex:1;"><canvas id="canvasSessionBars" style="width:100%; height:180px;"></canvas></div>
+              </div>
+            </div>
+
+            <!-- Journal Tab -->
+            <div class="tab-pane" id="tabJournal">
+              <div class="journal-header-bar">
+                <input type="text" placeholder="Tìm kiếm nhật ký..." class="form-control" id="journalSearchInput" style="width:200px;">
+                <select class="form-control" id="journalIctFilter" style="width:180px;"><option value="ALL">Tất cả mô hình ICT</option></select>
+              </div>
+              <div class="journal-list" id="journalEntriesContainer"></div>
+            </div>
+
+            <!-- Discipline Tab -->
+            <div class="tab-pane" id="tabDiscipline">
+              <div class="discipline-container">
+                <div class="discipline-score-card">
+                  <div class="gauge-circle" id="disciplineScoreCircle">100%</div>
+                  <strong style="color:#fff;">Discipline Score</strong>
+                  <span id="disciplineComplianceRate" style="color:#8a94a6; font-size:11px;">Tuân thủ: 100%</span>
+                  <button class="btn btn-secondary" id="btnEditDisciplineRules" style="margin-top:10px;">⚙️ Sửa quy tắc</button>
+                </div>
+                <div class="violations-list" id="disciplineViolationsContainer"></div>
+              </div>
+            </div>
+
+            <!-- System Log -->
+            <div class="tab-pane" id="tabSystemJournal">
+              <table class="data-table">
+                <thead><tr><th>Time</th><th>Type</th><th>Message</th></tr></thead>
+                <tbody id="systemLogBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Desktop Status Bar -->
+    <footer class="mt5-statusbar">
+      <div class="status-left">
+        <span class="conn-indicator">● Local Demo Connected (100%)</span>
+        <span id="statusCurrentSymbol">EURUSD, M5</span>
+        <span id="statusTickInfo">Bid: 1.08500 | Ask: 1.08512</span>
+      </div>
+      <div class="status-right">
+        <span id="statusServerTime">2026.10.17 00:00:00</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= DIALOGS & MODALS ================= -->
+
+  <!-- 1. New Order Modal (iOS / Desktop Shared) -->
+  <div class="modal-overlay" id="modalNewOrder">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <span>Đặt lệnh mới (New Order)</span>
+        <button class="modal-close-btn" data-close="modalNewOrder">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Symbol:</label>
+          <select class="form-control" id="orderSymbolSelect"></select>
+        </div>
+        <div class="form-group">
+          <label>Loại lệnh (Type):</label>
+          <select class="form-control" id="orderTypeSelect">
+            <optgroup label="Market Execution">
+              <option value="BUY_MARKET">Buy Market (Mua thị trường)</option>
+              <option value="SELL_MARKET">Sell Market (Bán thị trường)</option>
+            </optgroup>
+            <optgroup label="Pending Orders">
+              <option value="BUY_LIMIT">Buy Limit</option>
+              <option value="SELL_LIMIT">Sell Limit</option>
+              <option value="BUY_STOP">Buy Stop</option>
+              <option value="SELL_STOP">Sell Stop</option>
+              <option value="BUY_STOP_LIMIT">Buy Stop Limit</option>
+              <option value="SELL_STOP_LIMIT">Sell Stop Limit</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Khối lượng (Volume / Lot):</label>
+          <input type="number" step="0.01" min="0.01" max="50" value="0.10" class="form-control" id="orderVolumeInput">
+        </div>
+        <div class="form-group" id="pendingPriceGroup" style="display:none;">
+          <label>Mức giá đặt lệnh (Price):</label>
+          <input type="number" step="0.00001" class="form-control" id="orderPriceInput" placeholder="Price">
+        </div>
+        <div class="form-group" id="stopLimitGroup" style="display:none;">
+          <label>Mức giá Stop Limit:</label>
+          <input type="number" step="0.00001" class="form-control" id="orderStopLimitInput" placeholder="Stop Limit Price">
+        </div>
+        <div style="display:flex; gap:10px;">
+          <div class="form-group" style="flex:1;">
+            <label>Cắt lỗ (Stop Loss):</label>
+            <input type="number" step="0.00001" class="form-control" id="orderSlInput" placeholder="SL Price">
+          </div>
+          <div class="form-group" style="flex:1;">
+            <label>Chốt lời (Take Profit):</label>
+            <input type="number" step="0.00001" class="form-control" id="orderTpInput" placeholder="TP Price">
+          </div>
+        </div>
+        <div id="orderDisciplineWarning" style="color:#ff5252; font-size:11px; display:none; background:rgba(255,82,82,0.1); padding:6px; border-radius:4px;"></div>
+        <div class="btn-row">
+          <button class="btn btn-secondary" data-close="modalNewOrder">Hủy</button>
+          <button class="btn btn-primary" id="btnSubmitOrder">Thực hiện lệnh</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Local Demo Accounts Manager Modal -->
+  <div class="modal-overlay" id="modalAccounts">
+    <div class="modal-dialog wide">
+      <div class="modal-header">
+        <span>Quản lý tài khoản Local Demo</span>
+        <button class="modal-close-btn" data-close="modalAccounts">×</button>
+      </div>
+      <div class="modal-body">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <h4 style="color:#fff;">Danh sách tài khoản Demo nội bộ</h4>
+          <button class="btn btn-success" id="btnCreateAccountOpenModal">+ Tạo tài khoản mới</button>
+        </div>
+        <table class="data-table" style="margin-top:10px;">
+          <thead>
+            <tr>
+              <th>Số TK</th><th>Tên</th><th>Số dư (Balance)</th><th>Đòn bẩy</th><th>Tiền tệ</th><th>Chế độ</th><th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody id="accountsListBody"></tbody>
+        </table>
+
+        <!-- Quick Balance Edit -->
+        <div style="background:#151822; padding:12px; border-radius:6px; border:1px solid #282f40; margin-top:12px;">
+          <h5 style="color:#cbd5e1; margin-bottom:8px;">Điều chỉnh số dư cho tài khoản đang chọn:</h5>
+          <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+            <select class="form-control" id="quickBalanceAction" style="width:130px;">
+              <option value="DEPOSIT">Nạp tiền ảo</option>
+              <option value="WITHDRAW">Rút tiền ảo</option>
+              <option value="ADJUST">Chỉnh Balance</option>
+            </select>
+            <select class="form-control" id="suggestedBalanceAmounts" style="width:120px;">
+              <option value="100">$100</option>
+              <option value="500">$500</option>
+              <option value="1000" selected>$1,000</option>
+              <option value="5000">$5,000</option>
+              <option value="10000">$10,000</option>
+              <option value="CUSTOM">Custom Amount</option>
+            </select>
+            <input type="number" step="1" class="form-control" id="customAmountInput" placeholder="Nhập số tiền..." style="width:130px;">
+            <button class="btn btn-primary" id="btnApplyBalanceChange">Áp dụng</button>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-secondary" data-close="modalAccounts">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Create Account Modal -->
+  <div class="modal-overlay" id="modalCreateAccount">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <span>Tạo tài khoản Demo mới</span>
+        <button class="modal-close-btn" data-close="modalCreateAccount">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Tên tài khoản:</label>
+          <input type="text" class="form-control" id="newAccName" value="Demo Trader Pro">
+        </div>
+        <div class="form-group">
+          <label>Số dư khởi tạo ($):</label>
+          <select class="form-control" id="newAccInitialBalance">
+            <option value="100">$100</option>
+            <option value="500">$500</option>
+            <option value="1000" selected>$1,000</option>
+            <option value="5000">$5,000</option>
+            <option value="10000">$10,000</option>
+            <option value="CUSTOM">Tùy chỉnh...</option>
+          </select>
+          <input type="number" class="form-control" id="newAccCustomBalance" placeholder="Nhập số dư..." style="display:none; margin-top:5px;">
+        </div>
+        <div class="form-group">
+          <label>Đòn bẩy:</label>
+          <select class="form-control" id="newAccLeverage">
+            <option value="50">1:50</option>
+            <option value="100" selected>1:100</option>
+            <option value="200">1:200</option>
+            <option value="500">1:500</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tiền tệ cơ sở:</label>
+          <select class="form-control" id="newAccCurrency">
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+            <option value="VND">VND</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Loại tài khoản:</label>
+          <select class="form-control" id="newAccHedging">
+            <option value="true" selected>Hedging</option>
+            <option value="false">Netting</option>
+          </select>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-secondary" data-close="modalCreateAccount">Hủy</button>
+          <button class="btn btn-success" id="btnSubmitCreateAccount">Tạo tài khoản</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Partial Close Modal -->
+  <div class="modal-overlay" id="modalPartialClose">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <span>Đóng một phần vị thế</span>
+        <button class="modal-close-btn" data-close="modalPartialClose">×</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:#a0aab8; font-size:12px;">Vị thế: <strong id="partialCloseTicketBadge">#1000100</strong> (<span id="partialCloseSymbolBadge">EURUSD</span>)</p>
+        <p style="color:#a0aab8; font-size:12px;">Khối lượng hiện tại: <strong id="partialCloseCurrentVol">1.00</strong> lot</p>
+        <div class="form-group" style="margin-top:8px;">
+          <label>Khối lượng muốn đóng (Lot):</label>
+          <input type="number" step="0.01" min="0.01" class="form-control" id="partialCloseVolumeInput" value="0.50">
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-secondary" data-close="modalPartialClose">Hủy</button>
+          <button class="btn btn-danger" id="btnSubmitPartialClose">Xác nhận đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Journal Entry Editor Modal -->
+  <div class="modal-overlay" id="modalJournalEdit">
+    <div class="modal-dialog wide">
+      <div class="modal-header">
+        <span>Chi tiết nhật ký giao dịch & Mô hình ICT</span>
+        <button class="modal-close-btn" data-close="modalJournalEdit">×</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="editJournalEntryId">
+        <div style="display:flex; justify-content:space-between; color:#a0aab8; font-size:12px;">
+          <span>Lệnh: <strong id="jnModalTicket" style="color:#fff;">#1000100</strong> | <span id="jnModalSymbol">EURUSD</span> | P/L: <strong id="jnModalProfit">+$50.00</strong></span>
+          <span>Phiên: <strong id="jnModalSession">London</strong></span>
+        </div>
+        <div class="form-group" style="margin-top:8px;">
+          <label style="font-weight:600; color:#cbd5e1;">Mô hình ICT:</label>
+          <div id="ictChecklistContainer" style="display:grid; grid-template-columns: repeat(2, 1fr); gap:6px; max-height:130px; overflow-y:auto; background:#12141c; padding:8px; border-radius:4px;"></div>
+        </div>
+        <div class="form-group">
+          <label>Lý do vào lệnh:</label>
+          <textarea class="form-control" id="jnModalEntryReason" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Ghi chú & Tâm lý:</label>
+          <textarea class="form-control" id="jnModalNotes" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Ảnh chụp biểu đồ:</label>
+          <img id="jnModalSnapshotImg" style="width:100%; max-height:200px; object-fit:contain; background:#000; border-radius:4px;">
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-secondary" data-close="modalJournalEdit">Đóng</button>
+          <button class="btn btn-primary" id="btnSaveJournalEntry">Lưu nhật ký</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Discipline Rules Modal -->
+  <div class="modal-overlay" id="modalDisciplineRules">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <span>Quy tắc kỷ luật giao dịch</span>
+        <button class="modal-close-btn" data-close="modalDisciplineRules">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Rủi ro tối đa trên mỗi lệnh (% vốn):</label>
+          <input type="number" step="0.5" value="2.0" class="form-control" id="ruleMaxRiskInput">
+        </div>
+        <div class="form-group">
+          <label>Mức lỗ tối đa trong ngày (% vốn):</label>
+          <input type="number" step="0.5" value="5.0" class="form-control" id="ruleMaxDailyLossInput">
+        </div>
+        <div class="form-group">
+          <label>Số lệnh tối đa trong ngày:</label>
+          <input type="number" step="1" value="8" class="form-control" id="ruleMaxTradesInput">
+        </div>
+        <div class="form-group">
+          <label>Tỷ lệ R:R tối thiểu (Ví dụ 1.5):</label>
+          <input type="number" step="0.1" value="1.5" class="form-control" id="ruleMinRRInput">
+        </div>
+        <div class="form-group" style="flex-direction:row; align-items:center; gap:8px;">
+          <input type="checkbox" id="ruleMandatorySL" checked style="width:16px; height:16px;">
+          <label for="ruleMandatorySL" style="margin:0; cursor:pointer;">Bắt buộc phải có Cắt lỗ (Stop Loss)</label>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-secondary" data-close="modalDisciplineRules">Hủy</button>
+          <button class="btn btn-primary" id="btnSaveDisciplineRules">Lưu quy tắc</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Script -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

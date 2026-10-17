@@ -1,0 +1,57 @@
+成功したトレーダーのシグナルをコピーしましょう
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>成功したトレーダーのシグナルをコピーしましょう</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}.buttons{margin-bottom:40px}.button{display:inline-block;border-radius:2px;border:1px solid #4ba638;background:#fff;height:40px;line-height:38px;padding:0 20px;color:#000;font-size:15px;align-items:center;white-space:nowrap}.button:hover{cursor:pointer;opacity:.8;text-decoration:none}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}.button{border-color:#06D189;background:transparent;color:#D6D6D6}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>取引シグナルとコピートレード</h1>
+      <div class="text">
+        <p>プラットフォームから直接他のトレーダーの取引をコピーできます。異なる取引特性を持つ何千ものシグナルからお選びになれます。シグナルを購読すると、シグナルプロバイダーのすべての取引が自動的にご自身の取引口座で繰り返されます。
+        </p>
+        <h2>コピートレードのメリット</h2>
+        <ol>
+          <li>コピーできるシグナルは10,000以上あるので、ご自分に合ったシグナルをお選びいただけます。</li>
+          <li>各シグナルの全取引履歴にアクセスし、十分な情報に基づいた意思決定を行うことができます。トレーダーの成功と失敗をすべてご覧になれます。</li>
+          <li>シグナルの詳細な分析により、特定のリスクと収益性のパラメータを持つオファーをお選びいただけます。<br></li>
+          <li>定額制なので、スプレッドや隠れた手数料はありません。</li>
+        </ol>
+        <p>適切なシグナルを選択し、他のトレーダーの取引をコピーしましょう。</p>
+      </div>
+      <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/2.signals.jpg" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/2.signals.png" media="(prefers-color-scheme: dark)" />
+        <img width="620" height="310" alt="シグナル" src="https://c.mql5.com/external/emails/mt5/v2/2.signals.jpg" />
+    </picture>
+      <br />
+      <div class="text">
+        <h2>役に立つ記事</h2>
+        <ol>
+          <li><a
+              href="https://www.mql5.com/ja/articles/523?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.signals"
+              target="_blank">シグナルの購読方法は？</a></li>
+          <li><a
+              href="https://www.mql5.com/ja/articles/618?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.signals"
+              target="_blank">MetaTrader 4 および MetaTrader 5 のトレードシグナルに関する一般的情報</a></li>
+          <li><a target="_blank"
+              href="https://youtu.be/ntu6pZRopq4list=PLltlMLQ7OLeKMxPEMAQiYIbthg1IsTgGz?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.signals">取引シグナルに関する教育ビデオ</a></li>
+        </ol>
+      </div>
+      <div class="buttons">
+        <a href="https://www.mql5.com/ja/signals?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.signals" target="_blank" class="button">シグナルを選択</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Mail Signals');</script>
+</body>
+
+</html>

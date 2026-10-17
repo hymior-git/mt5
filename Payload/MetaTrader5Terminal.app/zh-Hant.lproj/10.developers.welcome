@@ -1,0 +1,85 @@
+創建您自己的交易應用程式
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>創建您自己的指標和EA交易</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}.buttons{margin-bottom:40px}.button{display:inline-block;border-radius:2px;border:1px solid #4ba638;background:#fff;height:40px;line-height:38px;padding:0 20px;color:#000;font-size:15px;align-items:center;white-space:nowrap}.button:hover{cursor:pointer;opacity:.8;text-decoration:none}.socials{margin-bottom:24px}.socials h3{font-size:13px;font-weight:400;margin-bottom:20px}.social-list{margin:0 auto;max-width:490px;display:flex;flex-wrap:wrap;justify-content:space-between}@media (max-width:500px){.social-list{display:block}.social-link{display:inline-block;vertical-align:top;margin:0 32px 24px}}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}.button{border-color:#06D189;background:transparent;color:#D6D6D6}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>創建您的指標和EA交易</h1>
+      <div class="text">
+        <p>通過該交易平臺，您可以進入演算法交易者的整個生態系統。如果在<a href="https://www.mql5.com/zh/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">現有應用程式</a>中找不到理想的解決方案，您可以創建自己的交易策略和指標。該生態系統可為任何級別的開發人員提供先進的工具和服務。豐富的知識庫和功能強大的開發工具為初學者提供了快速的學習曲線，並説明專業人士的技術水準達到質的飛躍。</p>
+        <h2>該生態系統提供：</h2>
+        <ul>
+          <li>用於開發技術指標、EA交易和實用工具的<a href="https://www.mql5.com/zh/docs?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">MetaQuotes Language 5(MQL5)</a>。這是一種高階語言，在語法上類似於C++，允許您使用物件導向程式設計來編寫程式。</li>
+          <li>提供智慧代碼處理、調試和分析選項的專業編輯工具<a href="https://www.metatrader5.com/zh/automated-trading/metaeditor?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">MetaEditor</a>。該編輯器便於開發任何複雜程度的交易應用程式。 <br></li>
+          <li>支援視覺化測試、優化、遺傳演算法和分散式測試代理網路等功能的<a href="https://www.metatrader5.com/zh/automated-trading/strategy-tester?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">Strategy Tester（策略測試）</a>。該策略測試可以在任何價格歷史分段上類比EA交易操作，並分析綜合報告。<br></li>
+          <li>基於Subversion且具有版本控制功能的<a href="https://www.metatrader5.com/zh/metaeditor/help/mql5storage/mql5storage_working?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">MQL5存儲</a>。可以安全存儲您的檔，隨時隨地進行訪問，並在必要時就大型項目進行協作。<br></li>
+          <li>提供交易平臺應用程式原始程式碼的大型免費<a href="https://www.mql5.com/zh/code?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">代碼庫</a>。探索EA交易、技術指標、腳本和程式庫的現有示例，並以此為基礎創建自己的應用程式。<br></li>
+          <li>涵蓋程式設計各個方面的獨有知識庫 — 數千頁詳細的<a href="https://www.mql5.com/zh/docs?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">文檔</a>和<a href="https://www.mql5.com/zh/articles?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">專業文章</a>。<br></li>
+        </ul>
+        <p>對於專業開發人員，我們提供了一個專門的網站，您可以在這裡向數百萬使用者提供您的產品和專業知識。最大的演算法交易者社區<a href="https://www.mql5.com/?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">MQL5.community</a>將為您帶來更多新機遇。在<a href="https://www.mql5.com/zh/forum?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">論壇</a>上討論您的想法，在<a
+            href="https://www.mql5.com/zh/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers"
+            target="_blank">市場</a>上銷售您的程式，或使用<a href="https://www.mql5.com/zh/job?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers" target="_blank">自由職業者服務</a>專案 — 在MQL5.community通過您的程式設計技能獲得認可和收入。</p>
+      </div>
+      <div class="buttons">
+        <a href="https://www.mql5.com/zh/articles/385?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers"
+          target="_blank" class="button">在MQL5.com成為賣方</a>
+      </div>
+      <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/10.developers.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/10.developers.png" media="(prefers-color-scheme: dark)" />
+        <img width="600" height="314" alt="" src="https://c.mql5.com/external/emails/mt5/v2/10.developers.png" />
+    </picture>
+      <br />
+      <div class="text">
+        <h2>可用文章：</h2>
+        <ol>
+          <li><a
+              href="https://www.mql5.com/zh/articles/4234?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers"
+              target="_blank">在MQL5社區您能獲得多少收入？</a><br></li>
+          <li><a
+              href="https://www.mql5.com/zh/articles/1019?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers"
+              target="_blank">如何在自由職業者服務中賺取收入</a></li>
+          <li><a
+              href="https://www.mql5.com/zh/articles/999?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.developers"
+              target="_blank">如何在市場上銷售您的產品</a></li>
+        </ol>
+      </div>
+      <div class="socials">
+        <h3>訂閱開發人員頻道，立即關注：</h3>
+        <div class="social-list">
+          <a href="https://www.facebook.com/mql5.community" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-facebook.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-facebook.png" media="(prefers-color-scheme: dark)" />
+        <img width="80"
+              height="80" alt="Facebook" src="https://c.mql5.com/external/emails/mt5/v2/qr-facebook.png" />
+    </picture></a>
+          <a href="https://twitter.com/mql5com" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-twitter.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-twitter.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80"
+              alt="Twitter" src="https://c.mql5.com/external/emails/mt5/v2/qr-twitter.png" />
+    </picture></a>
+          <a href="https://t.me/mql5dev" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-telegram.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-telegram.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80" alt="Telegram"
+              src="https://c.mql5.com/external/emails/mt5/v2/qr-telegram.png" />
+    </picture></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Mail Developers');</script>
+</body>
+
+</html>

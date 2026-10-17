@@ -1,0 +1,46 @@
+风险提示
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>风险提示</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>风险提示</h1>
+      <div class="text">      
+        <p>要知道，在平台上进行交易操作会有金融风险。您可能会损失部分或全部投资。因此，在做出交易决策之前，我们建议您对风险、成本、投资目标、您的经验和其他因素进行评估。如有必要，请咨询专业人士。</p>        
+        <p>请小心您最近在互联网上认识的朋友，尤其是Tinder、微信、Facebook和其他社交网络。</p>        
+        <p>为了避免您的投资面临不合理的风险，我们建议您遵守以下规则：</p>        
+        <ul>
+          <li>不要根据陌生人或不熟悉的人的建议进行交易或投资。</li>
+          <li>不要与您不认识或无法核实的人或组织进行金融活动。</li>
+          <li>不要向任何人透露您的财务状况。</li>
+          <li>不要相信那些谈论"独家投资机会"并催促您做出决定的人。</li>
+          <li>不要与可疑人员共享您的账户信息、证件号或其他机密信息。</li>
+          <li>不要相信承诺异常高利润的项目。</li>
+          <li>切勿与任何人共享您的账户信息。</li>
+        </ul>        
+        <p>MetaQuotes Ltd是一家交易平台软件开发公司，不提供金融、投资或经纪服务。MetaQuotes Ltd不参与、管理或影响交易操作，也无法开设真实交易账户或提供真实交易账户。</p>        
+        <p>程序中的信息不构成投资建议。MetaQuotes Ltd不对您的投资决策负责。</p>        
+        <p>交易平台开发人员：</p>        
+        <ul>
+          <li>无权访问您的账户</li>
+          <li>无权访问您的账户信息，包括账户状态和余额</li>
+          <li>不掌握您的交易操作信息</li>
+          <li>不参与交易平台的入金和出金</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Risk Warning');</script>
+</body>
+
+</html>

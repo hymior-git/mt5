@@ -1,0 +1,72 @@
+Tự tạo ứng dụng giao dịch
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Tự tạo chỉ b&#225;o v&#224; Chuy&#234;n gia Cố vấn ri&#234;ng</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}.buttons{margin-bottom:40px}.button{display:inline-block;border-radius:2px;border:1px solid #4ba638;background:#fff;height:40px;line-height:38px;padding:0 20px;color:#000;font-size:15px;align-items:center;white-space:nowrap}.button:hover{cursor:pointer;opacity:.8;text-decoration:none}.socials{margin-bottom:24px}.socials h3{font-size:13px;font-weight:400;margin-bottom:20px}.social-list{margin:0 auto;max-width:490px;display:flex;flex-wrap:wrap;justify-content:space-between}@media (max-width:500px){.social-list{display:block}.social-link{display:inline-block;vertical-align:top;margin:0 32px 24px}}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}.button{border-color:#06D189;background:transparent;color:#D6D6D6}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Tự tạo chỉ b&#225;o v&#224; Chuy&#234;n gia Cố vấn ri&#234;ng</h1>
+      <div class="text">
+        <p>Nền tảng giao dịch cho ph&#233;p bạn tham gia v&#224;o hệ sinh th&#225;i cho c&#225;c nh&#224; giao dịch theo thuật to&#225;n. Nếu kh&#244;ng t&#236;m được giải ph&#225;p cần thiết trong số <a href="https://www.mql5.com/en/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">những ứng dụng hiện c&#243;</a>, bạn c&#243; thể tự tạo chiến lược v&#224; chỉ b&#225;o giao dịch ri&#234;ng. Hệ sinh th&#225;i cung cấp nhiều c&#244;ng cụ v&#224; dịch vụ n&#226;ng cao cho c&#225;c nh&#224; ph&#225;t triển ở mọi cấp độ. Cơ sở tri thức đầy đủ v&#224; nhiều c&#244;ng cụ ph&#225;t triển mạnh mẽ gi&#250;p người mới băt đầu l&#224;m quen nhanh ch&#243;ng v&#224; hỗ trợ người đ&#227; c&#243; kinh nghiệm n&#226;ng cao chất lượng.</p>
+        <h2>Hệ sinh th&#225;i cung cấp:</h2>
+        <ul>
+          <li>Ng&#244;n ngữ <a href="https://www.mql5.com/en/docs?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">MetaQuotes Language 5</a> để lập tr&#236;nh chỉ b&#225;o kỹ thuật, robot giao dịch v&#224; tiện &#237;ch. Đ&#226;y l&#224; ng&#244;n ngữ lập tr&#236;nh bậc cao, hướng đối tượng, c&#243; c&#250; ph&#225;p gần giống C++.</li>
+          <li>C&#244;ng cụ chỉnh sửa chuy&#234;n nghiệp <a href="https://www.metatrader5.com/en/automated-trading/metaeditor?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">MetaEditor</a> hỗ trợ xử l&#253; m&#227; th&#244;ng minh, gỡ lỗi v&#224; lập hồ sơ. Tr&#236;nh chỉnh sửa hỗ trợ ph&#225;t triển ứng dụng giao dịch thuộc mọi mức độ phức tạp. <br></li>
+          <li><a href="https://www.metatrader5.com/en/automated-trading/strategy-tester?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">C&#244;ng cụ thử nghiệm chiến lược</a> hỗ trợ kiểm thử trực quan, tối ưu h&#243;a, giải thuật di truyền, mạng lưới chuy&#234;n vi&#234;n kiểm thử ph&#226;n t&#225;n, c&#249;ng nhiều t&#237;nh năng kh&#225;c. Giả lập hoạt động của Chuy&#234;n gia Cố vấn tại mọi ph&#226;n đoạn lịch sử gi&#225; v&#224; ph&#226;n t&#237;ch những b&#225;o c&#225;o to&#224;n diện.<br></li>
+          <li><a href="https://www.metatrader5.com/en/metaeditor/help/mql5storage/mql5storage_working?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">MQL5 Storage</a> dựa tr&#234;n Subversion c&#243; kiểm so&#225;t phi&#234;n bản. Lưu trữ an to&#224;n c&#225;c tệp của bạn, truy cập ở bất cứ đ&#226;u tr&#234;n thế giới v&#224; cộng t&#225;c trong những dự &#225;n lớn bất cứ khi n&#224;o cần thiết.<br></li>
+          <li>Thư viện <a href="https://www.mql5.com/en/code?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">Code Base</a> miễn ph&#237; lớn nhất chứa m&#227; nguồn của c&#225;c ứng dụng d&#224;nh cho nền tảng giao dịch. T&#236;m hiểm những Chuy&#234;n gia Cố vấn mẫu, chỉ b&#225;o kỹ thuật, đoạn m&#227; v&#224; thư viện được tạo sẵn v&#224; sử dụng những t&#224;i nguy&#234;n n&#224;y để ph&#225;t triển ứng dụng của ri&#234;ng bạn.<br></li>
+          <li>Cơ sở tri thức đặc biệt — h&#224;ng ng&#224;n trang nội dung k&#232;m <a href="https://www.mql5.com/en/docs?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">t&#224;i liệu</a> chi tiết v&#224; <a href="https://www.mql5.com/en/articles?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">b&#224;i viết chuy&#234;n m&#244;n</a> về nhiều kh&#237;a cạnh của c&#244;ng việc lập tr&#236;nh.<br></li>
+        </ul>
+        <p>Đối với những nh&#224; ph&#225;t triển chuy&#234;n nghiệp, ch&#250;ng t&#244;i c&#243; trang web ri&#234;ng để bạn c&#243; thể giới thiệu sản phẩm v&#224; chuy&#234;n m&#244;n của m&#236;nh cho h&#224;ng triệu người d&#249;ng. <a href="https://www.mql5.com/?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">MQL5.community</a> l&#224; cộng đồng giao dịch theo thuật to&#225;n lớn nhất, gi&#250;p mở ra nhiều cơ hội hơn nữa cho bạn. Trao đổi &#253; tưởng trong <a href="https://www.mql5.com/en/forum?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">Diễn đ&#224;n</a>, b&#225;n chương tr&#236;nh của bạn tr&#234;n <a href="https://www.mql5.com/en/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">Thị trường</a>, hoặc thực hiện c&#225;c dự &#225;n <a href="https://www.mql5.com/en/job?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">Tự do</a> — x&#226;y dựng uy t&#237;n v&#224; kiếm thu nhập từ kỹ năng lập tr&#236;nh tr&#234;n MQL5.community.</p>
+      </div>
+      <div class="buttons">
+        <a href="https://www.mql5.com/en/articles/385?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank" class="button">Trở th&#224;nh người b&#225;n tr&#234;n MQL5.com</a>
+      </div>
+      <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/10.developers.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/10.developers.png" media="(prefers-color-scheme: dark)" />
+        <img width="600" height="314" alt="" src="https://c.mql5.com/external/emails/mt5/v2/10.developers.png">
+    </picture>
+      <br>
+      <div class="text">
+        <h2>B&#224;i viết hữu &#237;ch:</h2>
+        <ol>
+          <li><a href="https://www.mql5.com/en/articles/4234?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">Thu nhập bạn c&#243; thể kiếm được từ cộng đồng l&#224; bao nhi&#234;u?</a><br></li>
+          <li><a href="https://www.mql5.com/en/articles/1019?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">C&#225;ch nhận việc Tự do để kiếm tiền</a></li>
+          <li><a href="https://www.mql5.com/en/articles/999?utm_source=mt5terminal&utm_medium=special&utm_campaign=vi.mail.developers" target="_blank">C&#225;ch b&#225;n sản phẩm của bạn tr&#234;n Thị trường</a></li>
+        </ol>
+      </div>
+      <div class="socials">
+        <h3>H&#227;y đăng k&#253; theo d&#245;i k&#234;nh d&#224;nh cho nh&#224; ph&#225;t triển:</h3>
+        <div class="social-list">
+          <a href="https://www.facebook.com/mql5.community" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-facebook.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-facebook.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80" alt="Facebook" src="https://c.mql5.com/external/emails/mt5/v2/qr-facebook.png">
+    </picture></a>
+          <a href="https://twitter.com/mql5com" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-twitter.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-twitter.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80" alt="Twitter" src="https://c.mql5.com/external/emails/mt5/v2/qr-twitter.png">
+    </picture></a>
+          <a href="https://t.me/mql5dev" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-telegram.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-telegram.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80" alt="Telegram" src="https://c.mql5.com/external/emails/mt5/v2/qr-telegram.png">
+    </picture></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Mail Developers');</script>
+</body>
+
+</html>

@@ -1,0 +1,657 @@
+/* ============================================================
+   MetaTrader 5 iOS (iPhone) — 99% Authentic Native Mobile Theme
+   ============================================================ */
+
+:root {
+  --ios-bg: #000000;
+  --ios-card-bg: #1c1c1e;
+  --ios-cell-bg: #1c1c1e;
+  --ios-separator: #2c2c2e;
+  --ios-text: #ffffff;
+  --ios-text-secondary: #8e8e93;
+  --ios-text-tertiary: #636366;
+  --ios-blue: #0a84ff;
+  --ios-green: #30d158;
+  --ios-red: #ff453a;
+  --ios-orange: #ff9f0a;
+  --ios-yellow: #ffd60a;
+  --ios-purple: #bf5af2;
+  --ios-tab-bg: rgba(22, 22, 24, 0.94);
+  --ios-nav-bg: rgba(22, 22, 24, 0.94);
+  --ios-border: #38383a;
+  --font-sf: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+}
+
+/* Device Wrapper (iPhone 16 Pro Frame or Fullscreen on Mobile) */
+.device-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0d0f14;
+  padding: 10px;
+}
+
+.iphone-frame {
+  width: 393px;
+  height: 852px;
+  max-width: 100vw;
+  max-height: 100vh;
+  background: var(--ios-bg);
+  border-radius: 54px;
+  box-shadow: 0 0 0 12px #262729, 0 25px 60px rgba(0, 0, 0, 0.85);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* When viewing on real mobile/PWA or fullscreen mode */
+body.mobile-fullscreen .device-container {
+  padding: 0;
+  background: #000;
+}
+body.mobile-fullscreen .iphone-frame {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ================= iOS Top Bar: Status Bar & Dynamic Island ================= */
+.ios-status-bar {
+  height: 48px;
+  padding: 14px 24px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-family: var(--font-sf);
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 50;
+  position: relative;
+}
+
+.dynamic-island {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 124px;
+  height: 34px;
+  background: #000000;
+  border-radius: 20px;
+  z-index: 60;
+  border: 1px solid #1c1c1e;
+}
+
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+/* ================= iOS Navigation Header ================= */
+.ios-nav-header {
+  height: 44px;
+  background: var(--ios-nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 0.5px solid var(--ios-separator);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 40;
+}
+
+.ios-nav-title {
+  font-family: var(--font-sf);
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  flex: 1;
+}
+
+.ios-nav-btn {
+  background: none;
+  border: none;
+  color: var(--ios-blue);
+  font-family: var(--font-sf);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+}
+.ios-nav-btn:active {
+  opacity: 0.5;
+}
+
+/* Segmented Control (Đơn giản / Nâng cao, Ngày/Tuần/Tháng) */
+.ios-segmented-control {
+  background: #2c2c2e;
+  border-radius: 8px;
+  padding: 2px;
+  display: flex;
+  margin: 6px 16px;
+}
+
+.segmented-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--ios-text-secondary);
+  font-family: var(--font-sf);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.segmented-btn.active {
+  background: #636366;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* ================= Screen Content Area ================= */
+.ios-screen-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--ios-bg);
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ios-tab-page {
+  display: none;
+  min-height: 100%;
+}
+.ios-tab-page.active {
+  display: block;
+}
+
+/* ================= TAB 1: QUOTES SCREEN (BẢNG GIÁ) ================= */
+.quotes-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 0.5px solid var(--ios-separator);
+  cursor: pointer;
+  background: var(--ios-bg);
+  transition: background 0.15s ease;
+}
+.quote-row:active {
+  background: var(--ios-card-bg);
+}
+
+.quote-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.quote-symbol {
+  font-family: var(--font-sf);
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.2px;
+}
+
+.quote-time-spread {
+  font-family: var(--font-sf);
+  font-size: 11px;
+  color: var(--ios-text-secondary);
+}
+
+.quote-right {
+  display: flex;
+  gap: 16px;
+  text-align: right;
+}
+
+.quote-price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 80px;
+}
+
+/* MT5 Big Pips typography */
+.big-price {
+  font-family: var(--font-sf);
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.2;
+}
+.big-price .pips {
+  font-size: 22px;
+  font-weight: 700;
+}
+.big-price .fraction {
+  font-size: 13px;
+  vertical-align: super;
+}
+
+.quote-low-high {
+  font-family: var(--font-sf);
+  font-size: 11px;
+  color: var(--ios-text-secondary);
+  margin-top: 1px;
+}
+
+/* Price Flash Animations */
+.flash-up {
+  color: var(--ios-blue) !important;
+}
+.flash-down {
+  color: var(--ios-red) !important;
+}
+
+/* ================= TAB 2: CHART SCREEN (BIỂU ĐỒ) ================= */
+.ios-chart-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ios-chart-top-bar {
+  height: 40px;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 0.5px solid var(--ios-separator);
+}
+
+.ios-chart-tf-btn {
+  background: #2c2c2e;
+  border: none;
+  color: #fff;
+  font-family: var(--font-sf);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* One Click Trading Bar on iOS Chart */
+.ios-oneclick-bar {
+  display: flex;
+  align-items: center;
+  background: #1c1c1e;
+  border-bottom: 0.5px solid var(--ios-separator);
+  padding: 4px 10px;
+  gap: 8px;
+}
+
+.ios-trade-btn {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: none;
+  font-family: var(--font-sf);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ios-trade-btn.sell {
+  background: var(--ios-red);
+  color: #fff;
+}
+.ios-trade-btn.buy {
+  background: var(--ios-blue);
+  color: #fff;
+}
+.ios-trade-btn span {
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+.ios-trade-btn strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ios-lot-picker {
+  width: 70px;
+  background: #000;
+  border: 1px solid #38383a;
+  color: #fff;
+  font-family: var(--font-sf);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 6px;
+}
+
+/* Practice Mode Replay Control Banner on iOS */
+.ios-practice-banner {
+  background: #1a233a;
+  border-bottom: 0.5px solid #2d3f66;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+}
+
+/* ================= TAB 3: TRADE SCREEN (GIAO DỊCH) ================= */
+.trade-summary-card {
+  background: var(--ios-bg);
+  padding: 12px 16px;
+  border-bottom: 0.5px solid var(--ios-separator);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-sf);
+  font-size: 14px;
+  color: var(--ios-text-secondary);
+}
+.summary-row.total-pl {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.summary-row strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.section-header-title {
+  padding: 14px 16px 6px 16px;
+  font-family: var(--font-sf);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ios-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.position-item {
+  background: var(--ios-bg);
+  padding: 10px 16px;
+  border-bottom: 0.5px solid var(--ios-separator);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+.position-item:active {
+  background: var(--ios-card-bg);
+}
+
+.pos-row-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pos-title {
+  font-family: var(--font-sf);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+.pos-pl {
+  font-family: var(--font-sf);
+  font-size: 16px;
+  font-weight: 700;
+}
+.pos-pl.blue { color: var(--ios-blue); }
+.pos-pl.red { color: var(--ios-red); }
+
+.pos-row-2 {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-sf);
+  font-size: 12px;
+  color: var(--ios-text-secondary);
+}
+
+/* ================= TAB 4: HISTORY SCREEN (LỊCH SỬ) ================= */
+.history-summary-box {
+  background: var(--ios-card-bg);
+  border-radius: 10px;
+  margin: 12px 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ================= TAB 5: SETTINGS SCREEN (CÀI ĐẶT) ================= */
+.settings-account-card {
+  background: var(--ios-card-bg);
+  border-radius: 12px;
+  margin: 14px 16px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.account-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #252836;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.account-info-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.acc-name {
+  font-family: var(--font-sf);
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.acc-details {
+  font-family: var(--font-sf);
+  font-size: 12.5px;
+  color: var(--ios-text-secondary);
+}
+
+.settings-group {
+  margin: 16px 16px;
+  background: var(--ios-card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.settings-cell {
+  padding: 13px 16px;
+  border-bottom: 0.5px solid var(--ios-separator);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-sf);
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+.settings-cell:last-child {
+  border-bottom: none;
+}
+.settings-cell:active {
+  background: #2c2c2e;
+}
+.settings-cell-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cell-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+}
+.chevron {
+  color: var(--ios-text-tertiary);
+  font-size: 16px;
+}
+
+/* ================= Bottom Tab Bar ================= */
+.ios-tab-bar {
+  height: 83px;
+  background: var(--ios-tab-bg);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-top: 0.5px solid var(--ios-separator);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 6px;
+  padding-bottom: 24px;
+  z-index: 50;
+}
+
+.ios-tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: var(--ios-text-secondary);
+  font-family: var(--font-sf);
+  font-size: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  flex: 1;
+}
+.ios-tab-item.active {
+  color: var(--ios-blue);
+}
+
+.tab-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Home Indicator Bar */
+.home-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 134px;
+  height: 5px;
+  background: #ffffff;
+  border-radius: 100px;
+  opacity: 0.8;
+  z-index: 70;
+  pointer-events: none;
+}
+
+/* ================= iOS Action Sheet Modal ================= */
+.ios-action-sheet-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: none;
+  align-items: flex-end;
+  z-index: 100;
+}
+.ios-action-sheet-overlay.active {
+  display: flex;
+}
+
+.ios-action-sheet {
+  width: 100%;
+  padding: 10px 10px 24px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: slideUp 0.25s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.action-sheet-group {
+  background: rgba(30, 30, 32, 0.95);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.action-sheet-title {
+  padding: 12px;
+  text-align: center;
+  font-family: var(--font-sf);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ios-text-secondary);
+  border-bottom: 0.5px solid var(--ios-separator);
+}
+
+.action-sheet-btn {
+  width: 100%;
+  padding: 15px;
+  background: none;
+  border: none;
+  border-bottom: 0.5px solid var(--ios-separator);
+  color: var(--ios-blue);
+  font-family: var(--font-sf);
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+.action-sheet-btn:last-child {
+  border-bottom: none;
+}
+.action-sheet-btn:active {
+  background: #2c2c2e;
+}
+.action-sheet-btn.cancel {
+  background: rgba(30, 30, 32, 0.95);
+  border-radius: 14px;
+  font-weight: 600;
+}

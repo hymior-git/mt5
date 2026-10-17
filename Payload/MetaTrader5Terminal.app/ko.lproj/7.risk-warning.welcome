@@ -1,0 +1,46 @@
+위험 경고
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>위험 경고</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>위험 경고</h1>
+      <div class="text">      
+        <p>플랫폼에서 거래 작업을 수행하려면 재정적 위험이 수반된다는 점을 기억하시기 바랍니다. 여러분의 투자금의 일부 또는 전부를 잃을 수 있습니다. 따라서 거래를 결정하기 전에 위험, 비용, 투자 목표, 본인의 경험 및 기타 요소에 대해 스스로 평가해 보는 것이 좋습니다. 필요한 경우 전문가와 상담하세요.</p>        
+        <p>인터넷, 특히 틴더, 위챗, 페이스북 및 기타 소셜 네트워크에서 최근에 만난 사람들에 대해 주의하세요.</p>        
+        <p>투자금이 부당한 위험에 노출되는 것을 방지하려면 다음의 규칙을 준수하는 것이 좋습니다:</p>        
+        <ul>
+          <li>낯선 사람이나 인증되지 않은 사람의 조언에 따라 거래하거나 투자하지 마세요.</li>
+          <li>알지 못하거나 확인할 수 없는 사람이나 조직과 금융 활동을 하지 마세요.</li>
+          <li>여러분의 재정 상황을 다른 사람에게 공개하지 마세요.</li>
+          <li>"독점적인 투자 기회"에 대해 이야기하며 결정을 재촉하는 사람들을 믿지 마세요.</li>
+          <li>계정 정보, 문서 식별 번호 또는 기타 기밀 정보를 의심스러운 개인과 공유하지 마세요.</li>
+          <li>비정상적으로 높은 수익을 약속하는 프로젝트는 신뢰하지 마세요.</li>
+          <li>계정 정보를 다른 사람과 공유하지 마세요.</li>
+        </ul>        
+        <p>MetaQuotes Ltd는 거래 플랫폼 소프트웨어 개발업체입니다. 회사는 금융, 투자 또는 중개 서비스를 제공하지 않습니다. MetaQuotes Ltd는 트레이딩 운영에 참여하거나 통제 또는 영향을 미치지 않으며 실계좌를 개설하거나 제공하지 않습니다. </p>        
+        <p>애플리케이션의 정보는 투자 조언을 하는 것이 아닙니다. MetaQuotes Ltd는 귀하의 투자 결정에 대해 책임을 지지 않습니다.</p>        
+        <p>트레이딩 플랫폼 개발자:</p>        
+        <ul>
+          <li>계정에 대한 액세스 권한이 없습니다.</li>
+          <li>계정 상태 및 잔액 등 계정에 대한 정보에 액세스할 수 없습니다.</li>
+          <li>거래 운영에 대한 정보가 없습니다.</li>
+          <li>거래 플랫폼에서 자금의 입출금에 참여하지 않습니다.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Risk Warning');</script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+Crie seu próprio aplicativo de negociação
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Crie seus próprios Expert Advisors e indicadores</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}.buttons{margin-bottom:40px}.button{display:inline-block;border-radius:2px;border:1px solid #4ba638;background:#fff;height:40px;line-height:38px;padding:0 20px;color:#000;font-size:15px;align-items:center;white-space:nowrap}.button:hover{cursor:pointer;opacity:.8;text-decoration:none}.socials{margin-bottom:24px}.socials h3{font-size:13px;font-weight:400;margin-bottom:20px}.social-list{margin:0 auto;max-width:490px;display:flex;flex-wrap:wrap;justify-content:space-between}@media (max-width:500px){.social-list{display:block}.social-link{display:inline-block;vertical-align:top;margin:0 32px 24px}}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}.button{border-color:#06D189;background:transparent;color:#D6D6D6}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Crie seus próprios Expert Advisors e indicadores</h1>
+      <div class="text">
+        <p>Com a plataforma de negociação, você tem acesso a todo um ecossistema para traders algorítmicos. Se as <a href="https://www.mql5.com/pt/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">soluções prontas</a> não são suficientes para você, pode criar suas próprias estratégias e indicadores. Aqui, você encontrará tudo o que um desenvolvedor de qualquer nível precisa. Uma ampla base de conhecimento e poderosas ferramentas de desenvolvimento ajudarão iniciantes a se adaptarem rapidamente, e especialistas experientes a alcançarem um novo nível de qualidade.</p>
+        <h2>À sua disposição:</h2>
+        <ul>
+          <li>A L<a href="https://www.mql5.com/pt/docs?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">inguagem MetaQuotes 5</a> para programar indicadores técnicos, robôs de negociação e utilitários. Esta é uma linguagem moderna de alto nível, muito próxima do C++ em termos de sintaxe, que permite escrever programas usando programação orientada a objetos.</li>
+          <li>O <a href="https://www.metatrader5.com/pt/automated-trading/metaeditor?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">MetaEditor</a> profissional com recursos de edição inteligente de código, depuração e perfilamento. Isso permite escrever aplicativos de negociação de qualquer complexidade. <br></li>
+          <li>Um <a href="https://www.metatrader5.com/pt/automated-trading/strategy-tester?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">testador de estratégias</a> com suporte a teste visual, otimização, algoritmos genéticos, rede de agentes de teste distribuída e muito mais. Simule o desempenho do Expert Advisor em qualquer parte do histórico de preços para obter um relatório detalhado.<br></li>
+          <li>O repositório pessoal <a href="https://www.metatrader5.com/pt/metaeditor/help/mql5storage/mql5storage_working?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">MQL5 Storage</a> com um sistema de controle de versões baseado no Subversion. Armazene seus
+            arquivos com segurança, acesse-os de qualquer lugar do mundo e, quando necessário, trabalhe em projetos maiores em colaboração com outras pessoas.<br></li>
+          <li>A <a href="https://www.mql5.com/pt/code?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">maior biblioteca gratuita</a> de códigos-fonte de programas para a plataforma de negociação. Estude exemplos prontos de Expert Advisors, indicadores técnicos, scripts ou bibliotecas e crie suas próprias aplicativos com base neles.<br></li>
+          <li>Uma base de conhecimento única — milhares de páginas de <a href="https://www.mql5.com/pt/docs?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">documentação</a> detalhada e <a href="https://www.mql5.com/pt/articles?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">artigos de especialistas</a> sobre diversos aspectos da programação.<br></li>
+        </ul>
+        <p>Para desenvolvedores profissionais, temos uma plataforma pronta onde você pode oferecer seus produtos e expertise a uma audiência de vários milhões. A maior comunidade de traders algorítmicos <a href="https://www.mql5.com/?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers"
+            target="_blank">MQL5.community</a>, que abrirá ainda mais possibilidades para você. Compartilhe sua experiência no <a href="https://www.mql5.com/pt/forum?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">fórum</a>, venda seus desenvolvimentos no <a
+            href="https://www.mql5.com/pt/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">Mercado</a> ou atenda a pedidos no <a href="https://www.mql5.com/pt/job?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers" target="_blank">serviço Freelance</a> — ganhe dinheiro com suas habilidades de programação junto com a MQL5.community.</p>
+      </div>
+      <div class="buttons">
+        <a href="https://www.mql5.com/pt/articles/385?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers"
+          target="_blank" class="button">Tornar-se vendedor na MQL5.com</a>
+      </div>
+      <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/10.developers.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/10.developers.png" media="(prefers-color-scheme: dark)" />
+        <img width="600" height="314" alt="" src="https://c.mql5.com/external/emails/mt5/v2/10.developers.png" />
+    </picture>
+      <br />
+      <div class="text">
+        <h2>Artigos úteis:</h2>
+        <ol>
+          <li><a
+              href="https://www.mql5.com/pt/articles/4234?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers"
+              target="_blank">Quanto você pode ganhar na comunidade</a><br></li>
+          <li><a
+              href="https://www.mql5.com/pt/articles/1019?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers"
+              target="_blank">Como ganhar dinheiro com o serviço Freelance</a></li>
+          <li><a
+              href="https://www.mql5.com/pt/articles/999?utm_source=mt5terminal&utm_medium=special&utm_campaign=pt.mail.developers"
+              target="_blank">Como vender adequadamente seus produtos no Mercado</a></li>
+        </ol>
+      </div>
+      <div class="socials">
+        <h3>Assine os canais para desenvolvedores:</h3>
+        <div class="social-list">
+          <a href="https://www.facebook.com/mql5.community" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-facebook.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-facebook.png" media="(prefers-color-scheme: dark)" />
+        <img width="80"
+              height="80" alt="Facebook" src="https://c.mql5.com/external/emails/mt5/v2/qr-facebook.png" />
+    </picture></a>
+          <a href="https://twitter.com/mql5com" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-twitter.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-twitter.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80"
+              alt="Twitter" src="https://c.mql5.com/external/emails/mt5/v2/qr-twitter.png" />
+    </picture></a>
+          <a href="https://t.me/mql5dev" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-telegram.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-telegram.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80" alt="Telegram"
+              src="https://c.mql5.com/external/emails/mt5/v2/qr-telegram.png" />
+    </picture></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Mail Developers');</script>
+</body>
+
+</html>

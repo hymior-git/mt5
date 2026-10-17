@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>MT5 Simulator — Automated Test Suite</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; padding: 24px; }
+    h1 { color: #38bdf8; font-size: 20px; margin-bottom: 16px; }
+    .test-card { background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px; }
+    .test-header { display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+    .status { padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+    .status.pass { background: #059669; color: #fff; }
+    .status.fail { background: #dc2626; color: #fff; }
+    .details { margin-top: 8px; font-family: monospace; font-size: 12px; color: #94a3b8; white-space: pre-wrap; }
+    .summary-box { background: #1e293b; padding: 16px; border-radius: 8px; margin-bottom: 20px; font-size: 14px; border-left: 4px solid #38bdf8; }
+  </style>
+</head>
+<body>
+  <h1>MT5 Local Demo Simulator — Automated Test Suite</h1>
+  <div class="summary-box" id="summaryBox">Đang chạy các bài kiểm thử tài chính và khớp lệnh tự động...</div>
+  <div id="testResults"></div>
+
+  <script type="module">
+    import { SYMBOL_DEFINITIONS, getSymbolSpec } from './js/config/symbols.js';
+    import { AccountsManager } from './js/engine/accounts.js';
+    import { RiskEngine } from './js/engine/riskEngine.js';
+    import { ExecutionEngine } from './js/engine/executionEngine.js';
+    import { AnalyticsEngine } from './js/analytics/analyticsEngine.js';
+    import { DisciplineEngine } from './js/discipline/disciplineEngine.js';
+    import { PracticeModeEngine } from './js/engine/practiceMode.js';
+    import { marketFeed } from './js/engine/marketFeed.js';
+
+    const results = [];
+
+    function assert(desc, condition, details = '') {
+      results.push({ desc, pass: Boolean(condition), details });
+    }
+
+    // ================= TEST 1: Account Management =================
+    try {
+      const state = { accounts: [], balanceHistory: [] };
+      const accMgr = new AccountsManager(state, () => {});
+      const acc = accMgr.createAccount({ name: 'Test Pro', balance: 1000, leverage: 100, currency: 'USD', hedging: true });
+      assert('Tạo tài khoản Demo với số dư $1,000 đòn bẩy 1:100', acc.balance === 1000 && acc.leverage === 100);
+
+      accMgr.deposit(acc.id, 500, 'Test Deposit');
+      assert('Nạp tiền ảo $500 -> Số dư tăng lên $1,500', acc.balance === 1500);
+
+      const withdrawRes = accMgr.withdraw(acc.id, 200, 'Test Withdraw');
+      assert('Rút tiền ảo $200 -> Số dư giảm xuống $1,300', withdrawRes.success && acc.balance === 1300);
+
+      accMgr.adjustBalance(acc.id, 5000, 'Adjust to $5,000');
+      assert('Chỉnh sửa số dư thành $5,000', acc.balance === 5000);
+
+      const history = accMgr.getBalanceHistory(acc.id);
+      assert('Lịch sử biến động số dư ghi nhận đầy đủ 4 giao dịch', history.length >= 4);
+    } catch (e) {
+      assert('Account Manager Test', false, e.message);
+    }
+
+    // ================= TEST 2: Risk Engine Margin & Floating P/L =================
+    try {
+      const state = { accounts: [] };
+      const accMgr = new AccountsManager(state, () => {});
+      const acc = accMgr.createAccount({ name: 'Risk Test', balance: 10000, leverage: 100, currency: 'USD' });
+      const risk = new RiskEngine(accMgr);
+
+      // Buy EURUSD 1.00 lot at 1.08500
+      const posBuy = { symbol: 'EURUSD', type: 'BUY', volume: 1.0, openPrice: 1.08500, commission: 7.0, swap: 0 };
+      const marginBuy = risk.calculatePositionMargin(posBuy, acc);
+      // Margin = (1.08500 * 1.0 * 100,000) / 100 = 1085.00
+      assert('Tính Used Margin cho 1.0 lot EURUSD đòn bẩy 1:100 là $1,085.00', Math.abs(marginBuy - 1085.00) < 0.01, `Actual: ${marginBuy}`);
+
+      // Floating P/L when Bid is 1.08600 (+10 pips = +$100 gross, -$7 comm = $93 net)
+      const plBuy = risk.calculatePositionFloatingPL(posBuy, { bid: 1.08600, ask: 1.08612 });
+      assert('Tính Floating P/L cho Buy EURUSD +10 pips: Gross $100, Net $93', plBuy.grossProfit === 100 && plBuy.netProfit === 93, `Actual: ${JSON.stringify(plBuy)}`);
+
+      // Sell XAUUSD (Gold) 0.50 lot at 2650.00
+      // Contract Size: 100
+      const posGold = { symbol: 'XAUUSD', type: 'SELL', volume: 0.5, openPrice: 2650.00, commission: 5.0, swap: 0 };
+      const marginGold = risk.calculatePositionMargin(posGold, acc);
+      // Margin = (2650 * 0.5 * 100) / 100 = 1325.00
+      assert('Tính Used Margin cho 0.5 lot Vàng XAUUSD đòn bẩy 1:100 là $1,325.00', Math.abs(marginGold - 1325.00) < 0.01, `Actual: ${marginGold}`);
+
+      // Gold drops to Ask 2640.00 (+10 points move for Sell = 10 * 0.5 * 100 = +$500 gross, -$5 comm = $495 net)
+      const plGold = risk.calculatePositionFloatingPL(posGold, { bid: 2639.75, ask: 2640.00 });
+      assert('Tính Floating P/L cho Sell Vàng khi giá giảm $10: Gross $500, Net $495', plGold.grossProfit === 500 && plGold.netProfit === 495, `Actual: ${JSON.stringify(plGold)}`);
+    } catch (e) {
+      assert('Risk Engine Test', false, e.message);
+    }
+
+    // ================= TEST 3: Execution Engine & Partial Close =================
+    try {
+      const state = { accounts: [], openPositions: [], pendingOrders: [], closedTrades: [], systemLogs: [] };
+      const accMgr = new AccountsManager(state, () => {});
+      const acc = accMgr.createAccount({ name: 'Exec Test', balance: 2000, leverage: 100, currency: 'USD' });
+      const risk = new RiskEngine(accMgr);
+      const exec = new ExecutionEngine(state, accMgr, risk, () => {});
+
+      window.__currentQuotes = {
+        EURUSD: { symbol: 'EURUSD', bid: 1.08500, ask: 1.08512, spreadPoints: 12, digits: 5 }
+      };
+
+      // Open Buy Market 1.00 lot
+      const res = exec.openMarketOrder({ accountId: acc.id, symbol: 'EURUSD', type: 'BUY', volume: 1.0, sl: 1.08000, tp: 1.09000 });
+      assert('Mở lệnh Buy Market 1.00 lot EURUSD khớp đúng giá Ask 1.08512', res.success && res.position.openPrice === 1.08512);
+
+      const ticket = res.position.ticket;
+
+      // Price moves up: Bid = 1.08800 (+28.8 pips)
+      window.__currentQuotes.EURUSD.bid = 1.08800;
+      window.__currentQuotes.EURUSD.ask = 1.08812;
+
+      // Partial Close 0.40 lots
+      const partRes = exec.partialClosePosition(ticket, 0.40);
+      assert('Đóng một phần 0.40 lot thành công', partRes.success);
+      assert('Vị thế còn lại đúng 0.60 lot', partRes.remainingPosition.volume === 0.60);
+      assert('Lịch sử lệnh đã đóng ghi nhận lệnh đóng 0.40 lot có lãi', partRes.closedRecord.volume === 0.40 && partRes.closedRecord.netProfit > 0);
+      assert('Số dư tài khoản tăng lên nhờ lợi nhuận thực hiện của 0.40 lot', acc.balance > 2000);
+
+      // Close the remaining 0.60 lot
+      const closeRes = exec.closePosition(ticket, 1.08800, 'Full Close remaining');
+      assert('Đóng hoàn toàn phần còn lại 0.60 lot thành công', closeRes.success && exec.openPositions.length === 0);
+    } catch (e) {
+      assert('Execution Engine Test', false, e.message);
+    }
+
+    // ================= TEST 4: Trading Discipline Engine =================
+    try {
+      const state = { accounts: [], disciplineRules: { maxRiskPerTradePercent: 1.5, mandatoryStopLoss: true, maxTradesPerDay: 5 } };
+      const accMgr = new AccountsManager(state, () => {});
+      const acc = accMgr.createAccount({ name: 'Discipline Test', balance: 1000, leverage: 100 });
+      const disc = new DisciplineEngine(state, () => {});
+
+      // Order with NO Stop Loss
+      const checkNoSL = disc.validateOrder({ account: acc, symbol: 'EURUSD', type: 'BUY', volume: 0.1, price: 1.08500, sl: null });
+      assert('Phát hiện vi phạm quy tắc bắt buộc Stop Loss', !checkNoSL.passed && checkNoSL.violations.some(v => v.rule === 'MANDATORY_STOP_LOSS'));
+
+      // Order with 50 pip risk on 1.0 lot ($500 risk on $1,000 balance = 50% risk vs 1.5% max)
+      const checkExcessRisk = disc.validateOrder({ account: acc, symbol: 'EURUSD', type: 'BUY', volume: 1.0, price: 1.08500, sl: 1.08000 });
+      assert('Phát hiện vi phạm vượt mức rủi ro tối đa (Risk 50% > Limit 1.5%)', !checkExcessRisk.passed && checkExcessRisk.violations.some(v => v.rule === 'MAX_RISK_PER_TRADE'));
+
+      const score = disc.computeDisciplineScore(10);
+      assert('Tính toán Discipline Score chính xác và trừ điểm khi có vi phạm', score.score < 100 && score.totalViolations >= 2);
+    } catch (e) {
+      assert('Discipline Engine Test', false, e.message);
+    }
+
+    // ================= TEST 5: Practice Mode Forward-Only Verification =================
+    try {
+      const practice = new PracticeModeEngine(marketFeed);
+      practice.startSession('EURUSD', 'M5', 30);
+      const initialCount = practice.getVisibleCandles().length;
+
+      practice.stepForward();
+      const afterStepCount = practice.getVisibleCandles().length;
+      assert('Practice Mode bước nến tiến về phía trước (+1 nến)', afterStepCount === initialCount + 1);
+
+      // Verify that NO rewind / stepBackward method exists on PracticeModeEngine
+      const hasRewind = typeof practice.rewind === 'function';
+      const hasStepBack = typeof practice.stepBackward === 'function';
+      assert('Tuyệt đối KHÔNG tồn tại phương thức tua ngược (no rewind / no stepBackward)', !hasRewind && !hasStepBack);
+    } catch (e) {
+      assert('Practice Mode Test', false, e.message);
+    }
+
+    // ================= TEST 6: Analytics Engine Calculations =================
+    try {
+      const analytics = new AnalyticsEngine();
+      const mockClosedTrades = [
+        { ticket: 1, accountId: 'acc1', symbol: 'EURUSD', netProfit: 150, openTime: '2026-10-17T08:00:00Z', closeTime: '2026-10-17T08:30:00Z' },
+        { ticket: 2, accountId: 'acc1', symbol: 'EURUSD', netProfit: -50, openTime: '2026-10-17T09:00:00Z', closeTime: '2026-10-17T09:20:00Z' },
+        { ticket: 3, accountId: 'acc1', symbol: 'XAUUSD', netProfit: 200, openTime: '2026-10-17T13:00:00Z', closeTime: '2026-10-17T13:45:00Z' },
+        { ticket: 4, accountId: 'acc1', symbol: 'XAUUSD', netProfit: -70, openTime: '2026-10-17T14:00:00Z', closeTime: '2026-10-17T14:30:00Z' }
+      ];
+
+      const metrics = analytics.computeMetrics(mockClosedTrades);
+      assert('Tính tổng số lệnh: 4 lệnh', metrics.totalTrades === 4);
+      assert('Tính Win Rate: 50% (2 thắng / 2 thua)', metrics.winRate === 50.0);
+      assert('Tính Net Profit: $230.00 ($350 lãi - $120 lỗ)', metrics.netProfit === 230.00);
+      assert('Tính Profit Factor: 2.92 ($350 / $120)', Math.abs(metrics.profitFactor - 2.92) < 0.05);
+      assert('Tách bạch phân bổ lợi nhuận theo phiên (London & New York)', metrics.profitBySession.London === 100 && metrics.profitBySession['New York'] === 130);
+    } catch (e) {
+      assert('Analytics Engine Test', false, e.message);
+    }
+
+    // Render test report
+    const container = document.getElementById('testResults');
+    let passCount = 0;
+    results.forEach(r => {
+      if (r.pass) passCount++;
+      const div = document.createElement('div');
+      div.className = 'test-card';
+      div.innerHTML = `
+        <div class="test-header">
+          <span>${r.desc}</span>
+          <span class="status ${r.pass ? 'pass' : 'fail'}">${r.pass ? 'PASSED' : 'FAILED'}</span>
+        </div>
+        ${r.details ? `<div class="details">${r.details}</div>` : ''}
+      `;
+      container.appendChild(div);
+    });
+
+    const summaryBox = document.getElementById('summaryBox');
+    const isAllPass = passCount === results.length;
+    summaryBox.style.borderLeftColor = isAllPass ? '#10b981' : '#ef4444';
+    summaryBox.innerHTML = `
+      <strong style="color:${isAllPass ? '#10b981' : '#ef4444'}; font-size:16px;">
+        ${isAllPass ? '✅ TẤT CẢ CÁC BÀI KIỂM THỬ ĐÃ ĐẠT (100% PASS)' : '❌ CÓ BÀI KIỂM THỬ THẤT BẠI'}
+      </strong><br>
+      Tổng số kiểm thử: <strong>${results.length}</strong> | Đạt: <strong style="color:#10b981;">${passCount}</strong> | Lỗi: <strong style="color:#ef4444;">${results.length - passCount}</strong>
+    `;
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+欢迎访问交易平台
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>歡迎訪問交易平臺</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}.subtitle{margin-bottom:24px;line-height:1.5}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}.link{display:inline-block;vertical-align:top;border:1px solid #e7edf3;padding:12px;line-height:0;margin:0 32px 24px}.link:hover{border-color:#bee7ff;text-decoration:none}.link__footer{display:block;margin-top:12px;position:relative;padding-left:30px;border-radius:2px}.link__footer img{position:absolute;left:0;top:4px}.link__text{display:block;text-align:left;color:#666;font-size:10px;line-height:1.3}.link__name{display:block;font-size:13px;font-weight:600;color:#000;text-align:left}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}.link{border-color:#444444}.link:hover{border-color:#1E90FF}.link__text{color:#808080}.link__name{color:#D6D6D6}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>歡迎訪問交易平臺</h1>
+      <div class="text">
+        <p>這是一個技術先進且<a href="https://www.metatrader5.com/zh/trading-platform?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.welcome" target="_blank">功能強大的交易平臺</a>，無論交易者的交易風格如何，都能使任何水準的交易者最大程度實現其理想成果。</p>
+        <ul>
+          <li>靈活的交易系統，支援所有訂單類型和不同執行模式</li>
+          <li>廣泛的分析能力 — 38種技術指標和44種分析工具，以及21種時間週期圖表（從分鐘到月份）</li>
+          <li>演算法交易 — <a href="https://www.mql5.com/zh/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.welcome" target="_blank">最大的交易應用程式商店</a>，您可在此購買現有的EA交易和指標</li>
+          <li>交易信號 — 11,000個<a href="https://www.mql5.com/zh/signals?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.welcome" target="_blank">付費信號和免費信號</a>可供選擇，訂閱信號並將提供商的交易複製到您的帳戶上</li>
+          <li>為交易者提供<a href="https://www.mql5.com/zh/vps?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.welcome" target="_blank">專業主機服務</a> — 最低的網路延遲，使您的EA和信號能夠盡可能高效地進行24/7全天候交易<br></li>
+          <li>專業的MQL5開發環境 — 用於創建、調試、測試和執行任何複雜程度的EA交易和指標</li>
+          <li><a href="https://www.mql5.com/zh/job?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.welcome" target="_blank">自由職業者服務</a> — 聘請專業開發人員，根據您的要求編寫EA或指標<br></li>
+          <li><a href="https://www.mql5.com/zh/forum/455279?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.welcome" target="_blank">報告</a>將説明您分析自己的交易活動，找出其優缺點</li>
+          <li>支付 — 直接在平臺上為真實帳戶充值或出金</li>
+        </ul>
+      </div>
+      <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/1.all-terminals.jpg" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/1.all-terminals.png" media="(prefers-color-scheme: dark)" />
+        <img width="620" height="378" alt="交易平臺" src="https://c.mql5.com/external/emails/mt5/v2/1.all-terminals.jpg" />
+    </picture>
+      <br /> <br />
+      <div class="subtitle">
+        您可以使用網頁端、Mac和Linux平臺以及通過移動設備在您的帳戶上進行交易：
+      </div>
+
+      <div class="links">
+        <a href="https://download.mql5.com/cdn/mobile/mt5/ios?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.mobile"
+          target="_blank" class="link"> <picture>
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-25902989411.png" media="(prefers-color-scheme: light)" />
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-25902989411.png" media="(prefers-color-scheme: dark)" />
+            <img width="100" height="100" alt=""
+            src="https://c.mql5.com/external/emails/mt5/v2/qr-25902989411.png" />
+        </picture> <span class="link__footer"> <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/app-store.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/app-store.png" media="(prefers-color-scheme: dark)" />
+        <img width="22" height="22" alt="AppStore" src="https://c.mql5.com/external/emails/mt5/v2/app-store.png" />
+    </picture> <span class="link__text"> 可在 <span class="link__name">AppStore</span>獲得 </span> </span> </a> <a href="https://download.mql5.com/cdn/mobile/mt5/android?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.mobile"
+          target="_blank" class="link"> <picture>
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-22320572985.png" media="(prefers-color-scheme: light)" />
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-22320572985.png" media="(prefers-color-scheme: dark)" />
+            <img width="100" height="100" alt=""
+            src="https://c.mql5.com/external/emails/mt5/v2/qr-22320572985.png" />
+        </picture> <span class="link__footer"> <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/google-play.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/google-play.png" media="(prefers-color-scheme: dark)" />
+        <img width="22" height="22" alt="Google Play" src="https://c.mql5.com/external/emails/mt5/v2/google-play.png" />
+    </picture> <span class="link__text"> 可在 <span class="link__name">Google Play</span>獲得 </span> </span> </a> <a href="https://download.mql5.com/cdn/mobile/mt5/android/app-gallery?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.mobile"
+          target="_blank" class="link"> <picture>
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-9549195142.png" media="(prefers-color-scheme: light)" />
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-9549195142.png" media="(prefers-color-scheme: dark)" />
+            <img width="100" height="100" alt=""
+            src="https://c.mql5.com/external/emails/mt5/v2/qr-9549195142.png" />
+        </picture> <span class="link__footer"> <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/huawei.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/huawei.png" media="(prefers-color-scheme: dark)" />
+        <img width="22" height="22" alt="App Gallery" src="https://c.mql5.com/external/emails/mt5/v2/huawei.png" />
+    </picture> <span class="link__text"> 可在 <span class="link__name">App Gallery</span>獲得 </span> </span> </a> <a href="https://download.mql5.com/cdn/web/metaquotes.software.corp/mt5/metatrader5.apk?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.mobile"
+          target="_blank" class="link"> <picture>
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-38462822168.png" media="(prefers-color-scheme: light)" />
+            <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-38462822168.png" media="(prefers-color-scheme: dark)" />
+            <img width="100" height="100" alt=""
+            src="https://c.mql5.com/external/emails/mt5/v2/qr-38462822168.png" />
+        </picture> <span class="link__footer"> <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/apk.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/apk.png" media="(prefers-color-scheme: dark)" />
+        <img width="22" height="22" alt="APK文件" src="https://c.mql5.com/external/emails/mt5/v2/apk.png" />
+    </picture> <span class="link__text"> 可在 <span class="link__name">APK文件</span> </span> </span> </a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Mail Welcome');</script>
+</body>
+
+</html>

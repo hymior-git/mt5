@@ -1,0 +1,49 @@
+Advertencia de riesgos
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Advertencia de riesgos</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Advertencia de riesgos</h1>
+      <div class="text">      
+        <p>Recuerde que el comercio en la plataforma implica riesgos financieros. Usted podría 
+        perder parte o la totalidad de su inversión. Por consiguiente, antes de tomar una decisión, le recomendamos evaluar los riesgos, los costes y los objetivos de la inversión, 
+        así como sus experiencias y otros factores. Consulte con un profesional si fuera necesario.</p>        
+        <p>Tenga cuidado con las personas que haya conocido recientemente en Internet, especialmente en las redes sociales Tinder, WeChat, Facebook y otras.</p>        
+        <p>Para evitar exponer su inversión a riesgos innecesarios, le recomendamos seguir estas reglas:</p>        
+        <ul>
+          <li>No comercie ni invierta siguiendo los consejos de personas que no conoce o que no estén acreditadas.</li>
+          <li>No realice actividades financieras con personas u organizaciones de las que no sepa nada o sobre las que no pueda verificar información.</li>
+          <li>No revele su situación financiera a nadie.</li>
+          <li>No se fíe de quienes le hablan de "oportunidades de inversión exclusivas" y le apresuran a tomar una decisión.</li>
+          <li>No facilite los datos de su cuenta, sus números de identificación y otra información confidencial a personas sospechosas.</li>
+          <li>No confíe en los proyectos que prometen una rentabilidad inusualmente alta.</li>
+          <li>No facilite nunca los datos de su cuenta a nadie.</li>
+        </ul>        
+        <p>MetaQuotes Ltd es el desarrollador del software de la plataforma comercial. La empresa no presta servicios financieros, de inversión o de corretaje. 
+        MetaQuotes Ltd no participa, controla o influye en las operaciones comerciales, ni tampoco abre ni proporciona cuentas comerciales reales. </p>        
+        <p>La información contenida en el anexo no supone un asesoramiento en materia de inversión. MetaQuotes Ltd no se hace responsable de las decisiones de inversión que usted tome.</p>        
+        <p>El desarrollador de la plataforma comercial:</p>        
+        <ul>
+          <li>no dispone de acceso a su cuenta</li>
+          <li>no dispone de acceso a la información sobre sus cuentas, incluidos el estado y el saldo de la misma</li>
+          <li>no dispone de información sobre sus transacciones comerciales</li>
+          <li>no participa en los depósitos y retiradas en la plataforma comercial</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Risk Warning');</script>
+</body>
+
+</html>

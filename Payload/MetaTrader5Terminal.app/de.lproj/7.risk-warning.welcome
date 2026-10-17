@@ -1,0 +1,46 @@
+Risiko-Warnung
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Risiko-Warnung</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Risiko-Warnung</h1>
+      <div class="text">      
+        <p>Bitte denken Sie daran, dass die Durchführung von Handelsgeschäften auf der Plattform mit finanziellen Risiken verbunden ist. Sie können einen Teil oder den gesamten Betrag Ihrer Investition verlieren. Daher empfehlen wir Ihnen, vor einer Entscheidung über eine Transaktion die Risiken, Kosten, Anlageziele, Ihre Erfahrung und andere Faktoren zu bewerten. Wenden Sie sich bei Bedarf an Fachleute.</p>        
+        <p>Seien Sie vorsichtig bei Personen, die Sie kürzlich im Internet kennengelernt haben, insbesondere bei Tinder, WeChat, Facebook und anderen sozialen Netzwerken.</p>        
+        <p>Um Ihre Investitionen keinen ungerechtfertigten Risiken auszusetzen, empfehlen wir Ihnen, die folgenden Regeln zu beachten:</p>        
+        <ul>
+          <li>Handeln oder investieren Sie nicht auf den Rat von Fremden oder nicht akkreditierten Personen.</li>
+          <li>Lassen Sie sich nicht auf finanzielle Aktivitäten mit Personen oder Organisationen ein, die Sie nicht kennen oder die Sie nicht überprüfen können.</li>
+          <li>Legen Sie Ihre finanzielle Situation niemandem gegenüber offen.</li>
+          <li>Vertrauen Sie niemandem, der von "exklusiven Anlagemöglichkeiten" spricht und Sie zu einer Entscheidung drängt.</li>
+          <li>Geben Sie Ihre Kontodaten, Dokumentennummern oder andere vertrauliche Informationen nicht an fragwürdige Personen weiter.</li>
+          <li>Vertrauen Sie nicht auf Projekte, die ungewöhnlich hohe Gewinne versprechen.</li>
+          <li>Geben Sie Ihre Kontoinformationen niemals an Dritte weiter.</li>
+        </ul>        
+        <p>MetaQuotes Ltd ist ein Entwickler einer Handelsplattform-Software. Das Unternehmen erbringt keine Finanz-, Anlage- oder Maklerdienstleistungen. MetaQuotes Ltd. ist nicht an Handelsgeschäften beteiligt, kontrolliert oder beeinflusst diese nicht und eröffnet oder bietet keine echten Handelskonten an. </p>        
+        <p>Die Informationen in diesem Antrag stellen keine Anlageberatung dar. MetaQuotes Ltd. ist nicht verantwortlich für Ihre Investitionsentscheidungen.</p>        
+        <p>Ein Entwickler der Handelsplattform:</p>        
+        <ul>
+          <li>hat keinen Zugang zu Ihrem Konto,</li>
+          <li>hat keinen Zugang zu Informationen über Ihre Konten, einschließlich Kontosituation und Kontostand,</li>
+          <li>hat keine Informationen über Ihre Handelsgeschäfte,</li>
+          <li>ist nicht an Einzahlungen und Abhebungen von Geldern auf der Handelsplattform beteiligt.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Risk Warning');</script>
+</body>
+
+</html>

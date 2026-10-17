@@ -1,0 +1,85 @@
+独自の取引アプリを作成する
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>独自の指標とエキスパートアドバイザー(EA)を作成する</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}.buttons{margin-bottom:40px}.button{display:inline-block;border-radius:2px;border:1px solid #4ba638;background:#fff;height:40px;line-height:38px;padding:0 20px;color:#000;font-size:15px;align-items:center;white-space:nowrap}.button:hover{cursor:pointer;opacity:.8;text-decoration:none}.socials{margin-bottom:24px}.socials h3{font-size:13px;font-weight:400;margin-bottom:20px}.social-list{margin:0 auto;max-width:490px;display:flex;flex-wrap:wrap;justify-content:space-between}@media (max-width:500px){.social-list{display:block}.social-link{display:inline-block;vertical-align:top;margin:0 32px 24px}}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}.button{border-color:#06D189;background:transparent;color:#D6D6D6}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>指標とエキスパートアドバイザー(EA)を作成する</h1>
+      <div class="text">
+        <p>取引プラットフォームでは、アルゴリズムトレーダーのエコシステム全体にアクセスできます。<a href="https://www.mql5.com/ja/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">既存アプリケーション</a>の中で希望のソリューションが見つからない場合は、独自の取引戦略と指標を作成することができます。エコシステムは、あらゆるレベルの開発者に高度なツールとサービスを提供します。広範な知識ベースと強力な開発ツールは、初心者に迅速な学習曲線を提供し、プロフェッショナルが質的に新しいレベルに到達するのを支援します。</p>
+        <h2>エコシステムに含まれるもの</h2>
+        <ul>
+          <li>テクニカル指標、自動売買ロボット、ユーティリティを開発するための<a href="https://www.mql5.com/ja/docs?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">MetaQuotes Language 5</a>：C++に構文がよく似た高度な高級言語で、オブジェクト指向プログラミングを使ってプログラムを書くことができます。</li>
+          <li>プロフェッショナルな<a href="https://www.metatrader5.com/ja/automated-trading/metaeditor?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">MetaEditor</a>編集ツール：インテリジェントなコード処理、デバッグ、およびプロファイリングオプションを備えています。このエディターは、あらゆる複雑なレベルの取引アプリケーションの開発を容易にします。<br></li>
+          <li>ビジュアルテスト、最適化、遺伝的アルゴリズム、分散テストエージェントネットワークなどをサポートする<a href="https://www.metatrader5.com/ja/automated-trading/strategy-tester?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">ストラテジーテスター</a>：任意の価格履歴セグメントでエキスパートアドバイザー(EA)の動作をシミュレートし、包括的なレポートを分析します。<br></li>
+          <li>Subversionベースのバージョン管理付き<a href="https://www.metatrader5.com/ja/metaeditor/help/mql5storage/mql5storage_working?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">MQL5ストレージ</a>：ファイルを安全に保管し、世界中のどこからでもアクセスでき、大規模なプロジェクトでも必要なときにいつでも共同作業ができます。<br></li>
+          <li>取引プラットフォーム用アプリケーションのソースコードを集めた、最大の無料<a href="https://www.mql5.com/ja/code?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">コードベース</a>：エキスパートアドバイザー(EA)、テクニカル指標、スクリプト、ライブラリの既成の例を探索し、独自のアプリケーションを作成するためのベースとして使用します。<br></li>
+          <li>ユニークなナレッジベース：何千ものページで、プログラミングの様々な側面をカバーする詳細な<a href="https://www.mql5.com/ja/docs?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">ドキュメント</a>や<a href="https://www.mql5.com/ja/articles?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">専門家の記事</a>が含まれます。<br></li>
+        </ul>
+        <p>プロ開発者の方には、数百万人のユーザーに製品や専門知識を提供できる専門サイトを提供しています。アルゴリズムトレーダーの最大のコミュニティである<a href="https://www.mql5.com/?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">MQL5.community</a>は、あなたにさらに新しいチャンスを開きます。<a href="https://www.mql5.com/ja/forum?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">フォーラム</a>でアイデアを話し合ったり、<a
+            href="https://www.mql5.com/ja/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers"
+            target="_blank">マーケット</a>でプログラムを販売したり、<a href="https://www.mql5.com/ja/job?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers" target="_blank">フリーランス</a>プロジェクトに参加したりして、MQL5.community でプログラミング スキルから評価と収入を獲得しましょう。</p>
+      </div>
+      <div class="buttons">
+        <a href="https://www.mql5.com/ja/articles/385?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers"
+          target="_blank" class="button">MQL5.comで販売者になる</a>
+      </div>
+      <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/10.developers.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/10.developers.png" media="(prefers-color-scheme: dark)" />
+        <img width="600" height="314" alt="" src="https://c.mql5.com/external/emails/mt5/v2/10.developers.png" />
+    </picture>
+      <br />
+      <div class="text">
+        <h2>役に立つ記事</h2>
+        <ol>
+          <li><a
+              href="https://www.mql5.com/ja/articles/4234?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers"
+              target="_blank">コミュニティでいくら稼げるのか？</a><br></li>
+          <li><a
+              href="https://www.mql5.com/ja/articles/1019?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers"
+              target="_blank">フリーランスで稼ぐ方法</a></li>
+          <li><a
+              href="https://www.mql5.com/ja/articles/999?utm_source=mt5terminal&utm_medium=special&utm_campaign=ja.mail.developers"
+              target="_blank">マーケットで商品を売る方法</a></li>
+        </ol>
+      </div>
+      <div class="socials">
+        <h3>開発者チャンネルに登録して、常につながりを保ちましょう</h3>
+        <div class="social-list">
+          <a href="https://www.facebook.com/mql5.community" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-facebook.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-facebook.png" media="(prefers-color-scheme: dark)" />
+        <img width="80"
+              height="80" alt="Facebook" src="https://c.mql5.com/external/emails/mt5/v2/qr-facebook.png" />
+    </picture></a>
+          <a href="https://twitter.com/mql5com" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-twitter.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-twitter.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80"
+              alt="Twitter" src="https://c.mql5.com/external/emails/mt5/v2/qr-twitter.png" />
+    </picture></a>
+          <a href="https://t.me/mql5dev" target="_blank" class="social-link"><picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/qr-telegram.png" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/qr-telegram.png" media="(prefers-color-scheme: dark)" />
+        <img width="80" height="80" alt="Telegram"
+              src="https://c.mql5.com/external/emails/mt5/v2/qr-telegram.png" />
+    </picture></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Mail Developers');</script>
+</body>
+
+</html>

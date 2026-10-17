@@ -1,0 +1,51 @@
+Rent high-speed hosting for 24/7 automated trading
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Rent high-speed hosting for 24/7 automated trading</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}.text-italic{text-align:center;font-style:italic;margin-bottom:24px;padding-top:12px;line-height:1.5}.buttons{margin-bottom:40px}.button{display:inline-block;border-radius:2px;border:1px solid #4ba638;background:#fff;height:40px;line-height:38px;padding:0 20px;color:#000;font-size:15px;align-items:center;white-space:nowrap}.button:hover{cursor:pointer;opacity:.8;text-decoration:none}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}.button{border-color:#06D189;background:transparent;color:#D6D6D6}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Best non-stop execution</h1>
+      <div class="text">
+        <p><a href="https://www.mql5.com/en/vps?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.virtualhosting" target="_blank">Built-in VPS</a> — specialized hosting for social and algorithmic trading. Create a virtual copy of your platform so that your strategies work around the clock even when your computer is turned off.</p>
+        <h2>Built-in VPS advantages:</h2>
+        <ul>
+          <li>Low latency — the service provides a delay of less than 3 ms for 70% of brokers' trading servers. This means you can greatly improve your performance compared to your home computer. This is how <a
+              href="https://www.mql5.com/en/vps/cheap-forex-vps-pricing?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.virtualhosting" target="_blank">the cost of the service is paid off</a>: even if you only perform a few trades per month, you will save pips on each trade, ultimately fully covering the virtual server renting cost.</li>
+          <li>Reliable access points - to ensure a stable connection with any broker, we have placed equipment in certified data centers in New York, London, Amsterdam, Johannesburg, Hong Kong, Lagos, Sao Paulo and Mumbai. Our partners provide maximum uptime, ensuring seamless and uninterrupted operation of your strategies 24/7.</li>
+          <li>Power — each user can access up to 16 GB of disk space, up to 3 GB of RAM and several CPU physical cores. These resources are more than enough for efficient simultaneous operation of several trading strategies.</li>
+          <li>Technological approach — we have developed special lite versions of trading platforms for our VPS, in which all the power is spent only on your tasks.</li>
+          <li>Full compatibility with the trading platform — all components are 100% compatible, and you do not need to configure or change anything: robots and signal subscriptions are migrated to the cloud in one click, while product activations do not expire.</li>
+          <li>Security — our internal policy protects your data from any third-party access. We guarantee that your account data and strategies will not fall into the wrong hands under any circumstances.</li>
+          <li>Flexible conditions — the longer the rental period, the lower the monthly cost.</li>
+        </ul>
+      </div>
+      <a href="https://www.youtube.com/watch?v=yd3ar2y0pCo" target="_blank">
+        <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/6.vps-en.jpg" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/6.vps-en.jpg" media="(prefers-color-scheme: dark)" />
+        <img width="620" height="348" alt="VPS" src="https://c.mql5.com/external/emails/mt5/v2/6.vps-en.jpg" />
+    </picture>
+      </a>
+      <br />
+      <div class="text-italic">
+        Virtual hosting video guide (2 minutes)
+      </div>
+      <div class="buttons">
+        <a href="https://www.mql5.com/en/vps?utm_source=mt5terminal&utm_medium=special&utm_campaign=en.mail.virtualhosting" target="_blank" class="button">More on VPS</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Mail VPS');</script>
+</body>
+
+</html>

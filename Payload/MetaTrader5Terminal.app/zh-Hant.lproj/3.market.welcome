@@ -1,0 +1,53 @@
+EA和指标可改善您的交易
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>EA和指標可改善您的交易</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.subtitle{margin-bottom:24px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}.buttons{margin-bottom:40px}.button{display:inline-block;border-radius:2px;border:1px solid #4ba638;background:#fff;height:40px;line-height:38px;padding:0 20px;color:#000;font-size:15px;align-items:center;white-space:nowrap}.button:hover{cursor:pointer;opacity:.8;text-decoration:none}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}.button{border-color:#06D189;background:transparent;color:#D6D6D6}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>從市場購買現有的EA交易和指標</h1>
+      <div class="text">
+        <p>該平臺將為您分析市場並執行交易。交易應用程式商店提供訪問數以千計的EA交易和技術指標，將您的交易水準提升至一個新的層次：</p>
+        <ol>
+          <li>廣泛的付費EA交易和免費EA交易選擇範圍，實施各種交易策略 — 選擇符合您交易風格的EA交易。</li>
+          <li>詳細的產品描述、截圖和視頻以及其他買家的評論將幫助您做出正確的選擇。</li>
+          <li>通過免費測試，在購買前評估產品功能。</li>
+          <li>借助數以千計的付費指標和免費指標，全面分析價格以提高交易效率</li>
+          <li>發現適合任何策略或概念的指標。可選擇趨勢跟蹤、通道、多幣種、集群、震盪和其他指標類型。</li>
+        </ol>
+      </div>
+      <picture>
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/3.market.jpg" media="(prefers-color-scheme: light)" />
+        <source srcset="https://c.mql5.com/external/emails/mt5/v2/dark/3.market.png" media="(prefers-color-scheme: dark)" />
+        <img width="620" height="234" alt="EA交易" src="https://c.mql5.com/external/emails/mt5/v2/3.market.jpg" />
+    </picture><br />
+      <br />
+      <div class="text">
+        <h2>可用文章：</h2>
+        <ol>
+          <li><a target="_blank"
+              href="https://www.mql5.com/zh/articles/498?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.market">如何購買EA交易或技術指標</a></li>
+          <li><a target="_blank"
+              href="https://www.mql5.com/zh/articles/586?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.market">如何在購買前測試EA交易</a></li>
+          <li><a
+              href="https://www.mql5.com/zh/articles/576?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.market"
+              target="_blank">在MQL5市場安全購買</a></li>
+        </ol>
+      </div>
+      <div class="buttons">
+        <a href="https://www.mql5.com/zh/market?utm_source=mt5terminal&utm_medium=special&utm_campaign=zh-tw.mail.market" target="_blank" class="button">在"市場"中選擇EA或指標</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Mail Market');</script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+Varování před rizikem
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-16">
+  <title>Varov&#225;n&#237; před rizikem</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Varov&#225;n&#237; před rizikem</h1>
+      <div class="text">      
+        <p>Pamatujte, že prov&#225;děn&#237; obchodn&#237;ch operac&#237; na platformě zahrnuje finančn&#237; rizika. Můžete ztratit č&#225;st nebo celou vaši investici. Proto před rozhodnut&#237;m o transakci doporučujeme zhodnotit rizika, n&#225;klady, investičn&#237; c&#237;le, sv&#233; zkušenosti a dalš&#237; faktory. V&#160;př&#237;padě nutnosti se poraďte s&#160;odborn&#237;ky.</p>        
+        <p>Buďte opatrn&#237; v&#160;kontaktu s&#160;lidmi, kter&#233; jste ned&#225;vno potkali na internetu, zejm&#233;na na Tinder, WeChat, Facebook a dalš&#237;ch soci&#225;ln&#237;ch s&#237;t&#237;ch.</p>        
+        <p>Abyste sv&#233; investice nevystavovali neopr&#225;vněn&#253;m rizikům, doporučujeme dodržovat n&#225;sleduj&#237;c&#237; pravidla:</p>        
+        <ul>
+          <li>Neobchodujte a neinvestujte na radu ciz&#237;ch nebo neakreditovan&#253;ch lid&#237;.</li>
+          <li>Nezapojujte se do finančn&#237;ch aktivit s&#160;lidmi nebo organizacemi, kter&#233; nezn&#225;te nebo si je nemůžete ověřit.</li>
+          <li>Neodhalujte nikomu svou finančn&#237; situaci.</li>
+          <li>Nevěřte lidem, kteř&#237; mluv&#237; o „v&#253;jimečn&#253;ch obchodn&#237;ch př&#237;ležitostech“ a tlač&#237; v&#225;s k&#160;rozhodnut&#237;.</li>
+          <li>Nesd&#237;lejte informace o sv&#233;m &#250;čtu, identifikačn&#237; č&#237;sla dokumentů nebo dalš&#237; důvěrn&#233; informace s&#160;pochybn&#253;mi jedinci.</li>
+          <li>Nevěřte projektům, kter&#233; slibuj&#237; neobvykle vysok&#233; zisky.</li>
+          <li>Nikdy nesd&#237;lejte s&#160;nik&#253;m informace o sv&#233;m &#250;čtu.</li>
+        </ul>        
+        <p>MetaQuotes Ltd je v&#253;voj&#225;řem softwaru pro obchodn&#237; platformu. Společnost neposkytuje finančn&#237;, investičn&#237; ani zprostředkovatelsk&#233; služby. MetaQuotes Ltd se ne&#250;častn&#237; obchodn&#237;ch operac&#237;, neř&#237;d&#237; je a ani neovlivňuje a neotv&#237;r&#225; ani neposkytuje skutečn&#233; obchodn&#237; &#250;čty. </p>        
+        <p>Informace v&#160;aplikaci nepředstavuj&#237; investičn&#237; poradenstv&#237;. Společnost MetaQuotes Ltd nezodpov&#237;d&#225; za vaše investičn&#237; rozhodnut&#237;.</p>        
+        <p>V&#253;voj&#225;ř obchodn&#237; platformy:</p>        
+        <ul>
+          <li>nem&#225; př&#237;stup k&#160;vašemu &#250;čtu</li>
+          <li>nem&#225; př&#237;stup k&#160;informac&#237;m o vašich &#250;čtech, včetně stavu &#250;čtu a zůstatku</li>
+          <li>nem&#225; informace o vašich obchodn&#237;ch operac&#237;ch</li>
+          <li>nepod&#237;l&#237; se na vkladech a v&#253;běrech fondů na obchodn&#237; platformě</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Risk Warning');</script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+Попередження про ризики
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Попередження про ризики</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:left;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-left:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Попередження про ризики</h1>
+      <div class="text">      
+        <p>Будь ласка, пам'ятайте, що торгові операції у платформі пов'язані з фінансовими ризиками. Ви можете частково або повністю втратити інвестиції. Тому перед тим, як прийняти рішення про угоду, рекомендуємо оцінити ризики, витрати, цілі інвестування, свій досвід та інші фактори. За потреби проконсультуйтеся у професіоналів.</p>        
+        <p>Обережно ставтеся до людей, з якими нещодавно познайомилися в інтернеті, зокрема у соціальних мережах Tinder, WeChat, Facebook та інших.</p>        
+        <p>Щоб не піддавати свої інвестиції невиправданим ризикам, рекомендуємо дотримуватися цих правил:</p>        
+        <ul>
+          <li>Не торгуйте та не інвестуйте за порадами малознайомих чи неакредитованих людей.</li>
+          <li>Не беріть участі у фінансовій діяльності з людьми або організаціями, про які нічого не знаєте або інформацію про які не можете перевірити.</li>
+          <li>Нікому не розкривайте свого фінансового становища.</li>
+          <li>Не довіряйте людям, які говорять про «ексклюзивні інвестиційні можливості» та кваплять вас із рішенням.</li>
+          <li>Не передавайте сумнівним особам дані про свої рахунки, ідентифікаційні номери документів та іншу конфіденційну інформацію.</li>
+          <li>Не довіряйте проектам, які обіцяють надзвичайно високий прибуток.</li>
+          <li>Нікому і ніколи не повідомляйте дані своїх облікових записів.</li>
+        </ul>        
+        <p>MetaQuotes Ltd — розробник програмного забезпечення торгової платформи. Компанія не надає фінансових, інвестиційних чи брокерських послуг. MetaQuotes Ltd не бере участі, не контролює та не впливає на торгові операції, а також не відкриває та не надає реальні торгові рахунки. </p>        
+        <p>Інформація в додатку не є рекомендацією щодо інвестування. Компанія MetaQuotes Ltd не несе відповідальності за ваші інвестиційні рішення.</p>        
+        <p>Розробник торгової платформи:</p>        
+        <ul>
+          <li>не має доступу до вашого облікового запису</li>
+          <li>не має доступу до інформації про ваші рахунки, у тому числі, про стан та баланс рахунку</li>
+          <li>не має інформації про ваші торгові операції</li>
+          <li>не бере участь у поповненнях та зняття коштів у торговій платформі</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Risk Warning');</script>
+</body>
+
+</html>

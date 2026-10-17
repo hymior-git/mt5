@@ -1,0 +1,46 @@
+تحذير من المخاطر
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="rtl">
+
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>تحذير من المخاطر</title>
+  <style>:root{color-scheme:light dark}*{-webkit-tap-highlight-color:transparent}a,b,body,center,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,label,li,ol,p,span,strong,u,ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}table{border-collapse:collapse;border-spacing:0}caption,table,tbody,td,tfoot,th,thead,tr{margin:0;border:0;box-sizing:border-box}:focus{outline:0}img{border:none}html{-webkit-text-size-adjust:100%;width:100%;min-height:100%;display:flex;flex-direction:column}body{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px;cursor:default;min-height:100%;line-height:1.4;width:100%;color:#000;display:flex;flex-direction:column;flex-grow:1}input{font-family:'Segoe UI',Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;font-size:13px}a{text-decoration:none;color:#416299}a:hover{text-decoration:underline}.container{max-width:1024px;width:100%;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;flex-grow:1}.content{padding:24px 0 0;text-align:center;flex-grow:1}@media (max-width:768px){.container{padding:0 16px}.content{padding:16px 0}}.content img{max-width:100%;height:auto}h1{font-size:24px;font-weight:400;margin-bottom:12px}h2{font-size:20px;font-weight:400;margin-top:24px;margin-bottom:8px}.text{text-align:right;line-height:1.5;margin-bottom:24px}.text p{margin-bottom:14px}.text ol,.text ul{margin:0;margin-bottom:12px;padding-right:20px}.text li{margin-bottom:6px}.text p:last-child{margin-bottom:0}</style><style id="style-dark">@media (prefers-color-scheme: dark){body{color:#D6D6D6}a{color:#1E90FF}}</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>تحذير من المخاطر</h1>
+      <div class="text">      
+        <p>يرجى تذكر أن إجراء عمليات التداول على المنصة ينطوي على مخاطر مالية. قد تخسر جزءًا أو كل استثمارك. لذا، قبل اتخاذ قرار بشأن الصفقة، نوصي بتقييم المخاطر والتكاليف والأهداف الاستثمارية وخبرتك وعوامل أخرى. استشر المتخصصين إذا لزم الأمر.</p>        
+        <p>كن حذرًا مع الأشخاص الذين قابلتهم مؤخرًا عبر الإنترنت، وخاصةً على Tinder وWeChat وFacebook وغيرها من شبكات التواصل الاجتماعي.</p>        
+        <p>لتجنب تعريض استثماراتك لمخاطر غير مبررة، ننصحك بالالتزام بالقواعد التالية:</p>        
+        <ul>
+          <li>لا تتاجر أو تستثمر بناءً على نصيحة الغرباء أو الأشخاص غير المعتمدين.</li>
+          <li>لا تشارك في أنشطة مالية مع أشخاص أو مؤسسات لا تعرفها أو لا يمكنك التحقق منها.</li>
+          <li>لا تكشف عن وضعك المالي لأي شخص.</li>
+          <li>لا تثق بالأشخاص الذين يتحدثون عن "فرص الاستثمار الحصرية" ويستعجلونك في اتخاذ القرار.</li>
+          <li>لا تشارك معلومات حسابك أو أرقام تعريف المستندات أو غيرها من المعلومات السرية مع أفراد مشكوك فيهم.</li>
+          <li>لا تثق بالمشاريع التي تعد بأرباح عالية بشكل غير عادي.</li>
+          <li>لا تشارك معلومات حسابك أبدًا مع أي شخص.</li>
+        </ul>        
+        <p>MetaQuotes Ltd هي شركة مطورة لبرمجيات منصة التداول. ولا تقدم الشركة خدمات مالية أو استثمارية أو وساطة. لا تشارك شركة MetaQuotes Ltd في عمليات التداول أو تتحكم فيها أو تؤثر عليها، ولا تفتح أو توفر حسابات تداول حقيقية. </p>        
+        <p>المعلومات الواردة في التطبيق لا تشكل نصيحة استثمارية. MetaQuotes Ltd ليست مسؤولة عن قراراتك الاستثمارية.</p>        
+        <p>مطور منصة التداول:</p>        
+        <ul>
+          <li>لا يستطيع الوصول إلى حسابك</li>
+          <li>لا يستطيع الوصول إلى معلومات حول حساباتك، بما في ذلك حالة الحساب ورصيده</li>
+          <li>ليس لديه معلومات حول عمليات التداول الخاصة بك</li>
+          <li>لا يشارك في عمليات إيداع وسحب الأموال في منصة التداول</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">external.EventPush('Window Risk Warning');</script>
+</body>
+
+</html>
